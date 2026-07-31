@@ -23,7 +23,7 @@ const compact = (value) =>
 const publicCv = {
   metadata: {
     schema_name: "pablo_naval_baudin_public_cv",
-    schema_version: "1.0.1",
+    schema_version: "1.0.3",
     last_updated: master.metadata.last_updated,
     generated_from: master.metadata.schema_name,
   },
@@ -97,11 +97,6 @@ const publicCv = {
     }),
   ),
   research_lines: master.research_lines,
-  contributions: master.selected_research_contributions.map((item) => ({
-    id: item.id,
-    title: item.title,
-    description: item.description,
-  })),
   projects: master.research_grants_and_projects
     .filter((item) => item.include_by_default !== false)
     .map((item) =>
@@ -109,15 +104,18 @@ const publicCv = {
         id: item.id,
         title: item.title,
         role: item.role,
+        type: item.type,
+        institution: item.institution,
         funder: item.funder,
         call: item.call,
         reference: item.reference,
         start_date: item.start_date,
         end_date: item.end_date,
         current: item.current,
+        date_label: item.date_label,
         description: item.description,
         outcomes: item.outcomes,
-        url: item.url,
+        url: item.url_visibility === "protected_internal" ? undefined : item.url,
       }),
     ),
   talks: master.talks_and_teaching

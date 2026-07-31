@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_name": "pablo_naval_baudin_public_cv",
-    "schema_version": "1.0.1",
+    "schema_version": "1.0.3",
     "last_updated": "2026-07-31",
     "generated_from": "pablo_naval_baudin_cv_master"
   },
@@ -267,29 +267,18 @@
       "title": "Clinical AI implementation and radiology workflow transformation"
     }
   ],
-  "contributions": [
-    {
-      "id": "contribution_t1_dark_rim",
-      "title": "T1 dark-rim sign",
-      "description": "Described and validated an accessible marker of chronic active inflammation in multiple sclerosis measurable on routine 3D T1-weighted MRI."
-    },
-    {
-      "id": "contribution_postcontrast_swi",
-      "title": "Post-contrast SWI for enhancing-lesion detection",
-      "description": "Demonstrated that post-contrast susceptibility-weighted imaging improves detection of enhancing multiple-sclerosis lesions."
-    },
-    {
-      "id": "contribution_3d_t1_tse",
-      "title": "3D T1 turbo spin echo for multiple-sclerosis follow-up",
-      "description": "Demonstrated improved detection of gadolinium-enhancing multiple-sclerosis lesions compared with 3D T1 turbo field echo."
-    },
-    {
-      "id": "contribution_clinical_ai_translation",
-      "title": "Clinical translation of quantitative imaging and AI",
-      "description": "Leads operational implementation of AI and computational imaging in radiology, including the ImaginEM pathway redesign."
-    }
-  ],
   "projects": [
+    {
+      "id": "project_ia_ictus",
+      "title": "IA-ICTUS: Independent Validation of the Siemens-Methinks Stroke Suite",
+      "role": "Project Coordinator; Reference-Standard and Ground-Truth Lead",
+      "type": "Internal IDI clinical AI validation project",
+      "institution": "Institut de Diagnòstic per la Imatge (IDI)",
+      "end_date": "2026-06",
+      "current": false,
+      "date_label": "Delivered June 2026",
+      "description": "Internal IDI project providing an independent pre-deployment validation of the Siemens-Methinks Stroke Suite before regional deployment in CatSalut. Coordinated the multicentre study and the neuroradiologist reference-standard process, including blinded double reading and adjudication."
+    },
     {
       "id": "project_mspredict",
       "title": "MSPredict: MS Prognosis through Advanced Imaging Analysis",
@@ -329,6 +318,7 @@
       "id": "project_imaginem",
       "title": "ImaginEM: AI-driven Redesign of the MRI Pathway in Multiple Sclerosis",
       "role": "Project Coordinator",
+      "type": "Clinical AI implementation and workflow transformation",
       "start_date": "2024",
       "current": true,
       "description": "Implementation and evaluation of AI-assisted longitudinal MRI review in the Bellvitge multiple-sclerosis pathway.",
@@ -878,10 +868,6 @@
     {
       "language": "French",
       "level": "C1"
-    },
-    {
-      "language": "German",
-      "level": "B1"
     }
   ]
 }

@@ -29,6 +29,20 @@ const formatDate = (value?: string | null) => {
   return month ? `${monthNames[Number(month) - 1]} ${year}` : year;
 };
 
+const formatProjectRange = (project: {
+  start_date?: string | null;
+  end_date?: string | null;
+  current?: boolean;
+  date_label?: string | null;
+}) => {
+  if (project.date_label) return project.date_label;
+  const start = project.start_date;
+  const end = project.current ? "Present" : project.end_date;
+  if (!start) return end ?? "";
+  if (!end || end === start) return start;
+  return `${start}–${end}`;
+};
+
 const externalLink = {
   target: "_blank",
   rel: "noreferrer",
@@ -42,7 +56,7 @@ export default function Home() {
         item.current || item.id === "role_seram_2026_congress_leadership",
     )
     .slice(0, 5);
-  const highlightedProjects = cv.projects.slice(0, 4);
+  const highlightedProjects = cv.projects;
   const selectedPublications = cv.publications.filter((item) => item.selected);
   const selectedTalks = cv.talks;
   const recentAwards = cv.awards.slice(0, 6);
@@ -174,52 +188,35 @@ export default function Home() {
             <p className="section-number">02</p>
             <div>
               <p className="eyebrow">Research</p>
-              <h2 id="research-title">From imaging signal to clinical change</h2>
+              <h2 id="research-title">Selected projects</h2>
             </div>
           </div>
 
-          <div className="contribution-grid">
-            {cv.contributions.map((contribution, index) => (
-              <article key={contribution.id}>
-                <p className="contribution-index">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3>{contribution.title}</h3>
-                <p>{contribution.description}</p>
+          <div className="project-list">
+            {highlightedProjects.map((project) => (
+              <article className="project-item" key={project.id}>
+                <div>
+                  <p className="item-meta">{formatProjectRange(project)}</p>
+                  <h3>
+                    {project.url ? (
+                      <a href={project.url} {...externalLink}>
+                        {project.title} <span aria-hidden="true">↗</span>
+                      </a>
+                    ) : (
+                      project.title
+                    )}
+                  </h3>
+                </div>
+                <div>
+                  <p className="project-role">
+                    {[project.role, project.type, project.institution]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </p>
+                  <p>{project.description}</p>
+                </div>
               </article>
             ))}
-          </div>
-
-          <div className="projects">
-            <div className="projects-heading">
-              <p className="aside-label">Selected projects</p>
-              <p>Current and recent translational work</p>
-            </div>
-            <div className="project-list">
-              {highlightedProjects.map((project) => (
-                <article className="project-item" key={project.id}>
-                  <div>
-                    <p className="item-meta">
-                      {project.start_date}–
-                      {project.current ? "Present" : project.end_date}
-                    </p>
-                    <h3>
-                      {project.url ? (
-                        <a href={project.url} {...externalLink}>
-                          {project.title} <span aria-hidden="true">↗</span>
-                        </a>
-                      ) : (
-                        project.title
-                      )}
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="project-role">{project.role}</p>
-                    <p>{project.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -231,10 +228,8 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-number">03</p>
             <div>
-              <p className="eyebrow">Selected publications</p>
-              <h2 id="publications-title">
-                Research designed to be clinically useful
-              </h2>
+              <p className="eyebrow">Publications</p>
+              <h2 id="publications-title">Selected peer-reviewed articles</h2>
             </div>
           </div>
 
