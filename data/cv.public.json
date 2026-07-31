@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_name": "pablo_naval_baudin_public_cv",
-    "schema_version": "1.0.0",
+    "schema_version": "1.0.1",
     "last_updated": "2026-07-31",
     "generated_from": "pablo_naval_baudin_cv_master"
   },
@@ -200,13 +200,6 @@
       "organization": "Hospital Universitari de Bellvitge",
       "start_date": "2021",
       "current": true
-    },
-    {
-      "id": "role_bellvitge_residency_programme_coordinator",
-      "title": "Radiology Residency Programme Coordinator",
-      "organization": "Hospital Universitari de Bellvitge",
-      "start_date": "2025",
-      "current": true
     }
   ],
   "education": [
@@ -365,7 +358,8 @@
       "organization": "European Society of Neuroradiology",
       "location": "Madrid, Spain",
       "date_start": "2026-06-11",
-      "date_end": "2026-06-13"
+      "date_end": "2026-06-13",
+      "url": "https://www.esnr.org/event-details/7012"
     },
     {
       "id": "talk_radiolegs_innovation_panel_2026",
@@ -384,7 +378,8 @@
       "event": "Radiomics and Advanced Neuroimaging in Neuro-oncology",
       "organization": "Canon Medical Academy",
       "location": "Online",
-      "date": "2025-06-26"
+      "date": "2025-06-26",
+      "url": "https://academy.eu.medical.canon/courses/radiomics-and-advanced-neuroimaging-in-neuro-oncology/"
     },
     {
       "id": "talk_seen_pituitary_radiomics_2025",
@@ -423,7 +418,8 @@
       "event": "European Congress of Radiology 2022",
       "organization": "European Society of Radiology",
       "location": "Vienna, Austria",
-      "date": "2022-07-14"
+      "date": "2022-07-14",
+      "url": "https://connect.myesr.org/course/how-to-train-radiologists-and-related-professionals-in-ai/"
     }
   ],
   "awards": [
@@ -600,142 +596,185 @@
       "id": "pub_2026_mcdonald_radiologia",
       "year": 2026,
       "citation": "Naval-Baudin P, Rovira A. Implicaciones Radiológicas de Los Criterios Revisados McDonald de 2024 Para La Esclerosis Múltiple. Radiología. 2026;501811.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1016/j.rx.2026.501811",
+      "url": "https://doi.org/10.1016/j.rx.2026.501811"
     },
     {
       "id": "pub_2026_brain_volumetry_editorial",
       "year": 2026,
       "citation": "Naval-Baudin P, González-Montesinos M. Time to Tap into Clinical MRI for Brain Volumetry Research? European Radiology. 2026:2–4.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1007/s00330-026-12446-2",
+      "url": "https://doi.org/10.1007/s00330-026-12446-2"
     },
     {
       "id": "pub_2025_3d_t1_tse_ms",
       "year": 2025,
       "citation": "Naval-Baudin P, Bermúdez Bravo WF, Pineda-Borja VI, et al. 3D T1 Turbo Spin Echo Improves Detection of Gadolinium-Enhancing Multiple-Sclerosis Lesions. Insights Imaging. 2025;16:212.",
-      "selected": true
+      "selected": true,
+      "doi": "10.1186/s13244-025-02093-4",
+      "url": "https://doi.org/10.1186/s13244-025-02093-4"
     },
     {
       "id": "pub_2025_postcontrast_swi_ms",
       "year": 2025,
       "citation": "Naval-Baudin P, Pérez-Alfonso K, Castillo-Pinar A, et al. Post-contrast Susceptibility Weighted Imaging in Multiple Sclerosis MRI Improves the Detection of Enhancing Lesions. Clin Neuroradiol. 2025;35:533–539.",
-      "selected": true
+      "selected": true,
+      "doi": "10.1007/s00062-025-01508-5",
+      "url": "https://doi.org/10.1007/s00062-025-01508-5"
     },
     {
       "id": "pub_2025_late_onset_mcdonald",
       "year": 2025,
       "citation": "Tena-Cucala R, Naval-Baudin P, Martínez-Yélamos A, et al. The 2024 McDonald criteria show comparable sensitivity to previous criteria for late-onset multiple sclerosis. Mult Scler Relat Disord. 2025;103:106658.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1016/j.msard.2025.106658",
+      "url": "https://doi.org/10.1016/j.msard.2025.106658"
     },
     {
       "id": "pub_2025_image_analysis_neuroradiology",
       "year": 2025,
       "citation": "Pareto D, Naval-Baudin P, Pons-Escoda A, et al. Image analysis research in neuroradiology: bridging clinical and technical domains. Neuroradiology. 2025;67:1649–1666.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1007/s00234-025-03633-x",
+      "url": "https://doi.org/10.1007/s00234-025-03633-x"
     },
     {
       "id": "pub_2025_gadolinium_glioma_followup",
       "year": 2025,
       "citation": "Naval-Baudin P, Pons-Escoda A. Reconsidering gadolinium in long-term glioma follow-up: is contrast always and unquestionably necessary? Eur Radiol. 2025;35:5203–5205.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1007/s00330-025-11504-5",
+      "url": "https://doi.org/10.1007/s00330-025-11504-5"
     },
     {
       "id": "pub_2024_deep_t1_prl",
       "year": 2024,
       "citation": "Naval-Baudin P, Pons-Escoda A, Camins À, et al. Deeply 3D-T1-TFE hypointense voxels are characteristic of phase-rim lesions in multiple sclerosis. Eur Radiol. 2024;34:1337–1345.",
       "selected": true,
-      "url": "https://link.springer.com/article/10.1007/s00330-023-09784-w"
+      "doi": "10.1007/s00330-023-09784-w",
+      "url": "https://doi.org/10.1007/s00330-023-09784-w"
     },
     {
       "id": "pub_2024_t1_dark_rim",
       "year": 2024,
       "citation": "Naval-Baudin P, Pons-Escoda A, Castillo-Pinar A, et al. The T1-dark-rim: A novel imaging sign for detecting smoldering inflammation in multiple sclerosis. Eur J Radiol. 2024;173:111358.",
       "selected": true,
-      "url": "https://www.sciencedirect.com/science/article/pii/S0720048X24000743"
+      "doi": "10.1016/j.ejrad.2024.111358",
+      "url": "https://doi.org/10.1016/j.ejrad.2024.111358"
     },
     {
       "id": "pub_2024_ms_biomarkers_need",
       "year": 2024,
       "citation": "Naval-Baudin P, Arroyo-Pereiro P, Majós C. The pressing need for imaging biomarkers of disability progression in multiple sclerosis. Eur Radiol. 2024;34:3823–3825.",
       "selected": true,
-      "url": "https://link.springer.com/article/10.1007/s00330-023-10459-9"
+      "doi": "10.1007/s00330-023-10459-9",
+      "url": "https://doi.org/10.1007/s00330-023-10459-9"
     },
     {
       "id": "pub_2024_deep_learning_perfusion",
       "year": 2024,
       "citation": "Garcia-Ruiz A, Pons-Escoda A, Grussu F, et al. An accessible deep learning tool for voxel-wise classification of brain malignancies from perfusion MRI. Cell Rep Med. 2024;5:101464.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1016/j.xcrm.2024.101464",
+      "url": "https://doi.org/10.1016/j.xcrm.2024.101464"
     },
     {
       "id": "pub_2024_dsc_idh_1p19q",
       "year": 2024,
       "citation": "Pons-Escoda A, Garcia-Ruiz A, Naval-Baudin P, et al. Differentiating IDH-mutant astrocytomas and 1p19q-codeleted oligodendrogliomas using DSC-PWI: high performance through cerebral blood volume and percentage of signal recovery percentiles. Eur Radiol. 2024;34:5320–5330.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1007/s00330-024-10611-z",
+      "url": "https://doi.org/10.1007/s00330-024-10611-z"
     },
     {
       "id": "pub_2024_mrs_astrocytoma",
       "year": 2024,
       "citation": "Majós C, Pons-Escoda A, Naval P, et al. Proton MR spectroscopy shows improved performance to segregate high-grade astrocytoma subgroups when defined with the new 2021 WHO classification of CNS tumours. Eur Radiol. 2024;34:2174–2182.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1007/s00330-023-10138-9",
+      "url": "https://doi.org/10.1007/s00330-023-10138-9"
     },
     {
       "id": "pub_2024_dsc_grade4_young_adults",
       "year": 2024,
       "citation": "Pons-Escoda A, Naval-Baudin P, Viveros M, et al. DSC-PWI presurgical differentiation of grade 4 astrocytoma and glioblastoma in young adults: rCBV percentile analysis across enhancing and non-enhancing regions. Neuroradiology. 2024;66:1267–1277.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1007/s00234-024-03385-0",
+      "url": "https://doi.org/10.1007/s00234-024-03385-0"
     },
     {
       "id": "pub_2024_noddi_editorial",
       "year": 2024,
       "citation": "Naval-Baudin P, Pons-Escoda A. Pushing the Envelope: advanced imaging-data-analysis meets NODDI to differentiate glioblastoma and brain metastasis. Eur Radiol. 2024;34:6614–6615.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1007/s00330-024-10764-x",
+      "url": "https://doi.org/10.1007/s00330-024-10764-x"
     },
     {
       "id": "pub_2023_cerebellar_tumour_perfusion",
       "year": 2023,
       "citation": "Pons-Escoda A, Garcia-Ruiz A, Garcia-Hidalgo C, et al. MR dynamic-susceptibility-contrast perfusion metrics in the presurgical discrimination of adult solitary intra-axial cerebellar tumours. Eur Radiol. 2023;33:9120–9129.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1007/s00330-023-09892-7",
+      "url": "https://doi.org/10.1007/s00330-023-09892-7"
     },
     {
       "id": "pub_2023_cns_lymphoma_review",
       "year": 2023,
       "citation": "Pons-Escoda A, Naval-Baudin P, Velasco R, et al. Imaging of Lymphomas Involving the CNS: An Update-Review of the Full Spectrum of Disease with an Emphasis on the WHO Classifications of CNS Tumors 2021 and Hematolymphoid Tumors 2022. AJNR Am J Neuroradiol. 2023;44:358–366.",
-      "selected": true
+      "selected": true,
+      "doi": "10.3174/ajnr.a7795",
+      "url": "https://doi.org/10.3174/ajnr.a7795"
     },
     {
       "id": "pub_2023_eating_induced_seizures",
       "year": 2023,
       "citation": "Tena-Cucala R, Sala-Padró J, Jaraba S, et al. Eating-induced seizures: A semiological sign of the right temporal pole. Epileptic Disord. 2023;25:480–491.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1002/epd2.20035",
+      "url": "https://doi.org/10.1002/epd2.20035"
     },
     {
       "id": "pub_2022_dsc_time_intensity_curves",
       "year": 2022,
       "citation": "Pons-Escoda A, Garcia-Ruiz A, Naval-Baudin P, et al. Voxel-level analysis of normalized DSC-PWI time-intensity curves: a potential generalizable approach and its proof of concept in discriminating glioblastoma and metastasis. Eur Radiol. 2022.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1007/s00330-021-08498-1",
+      "url": "https://doi.org/10.1007/s00330-021-08498-1"
     },
     {
       "id": "pub_2022_ifof_gliomas",
       "year": 2022,
       "citation": "Camins À, Naval-Baudin P, Majós C, et al. Inferior fronto-occipital fascicle displacement in temporoinsular gliomas using diffusion tensor imaging. J Neuroimaging. 2022;32:638–646.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1111/jon.12992",
+      "url": "https://doi.org/10.1111/jon.12992"
     },
     {
       "id": "pub_2022_ebv_pcns_lymphoma",
       "year": 2022,
       "citation": "Pons-Escoda A, García-Ruíz A, Naval-Baudin P, et al. Diffuse Large B-Cell Epstein-Barr Virus-Positive Primary CNS Lymphoma in Non-AIDS Patients: High Diagnostic Accuracy of DSC Perfusion Metrics. AJNR Am J Neuroradiol. 2022;43:1567–1574.",
-      "selected": false
+      "selected": false,
+      "doi": "10.3174/ajnr.a7668",
+      "url": "https://doi.org/10.3174/ajnr.a7668"
     },
     {
       "id": "pub_2022_anterior_insula_self_monitoring",
       "year": 2022,
       "citation": "Gomez-Andres A, Cunillera T, Rico I, et al. The role of the anterior insular cortex in self-monitoring: A novel study protocol with electrical stimulation mapping and functional magnetic resonance imaging. Cortex. 2022;157:231–244.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1016/j.cortex.2022.09.008",
+      "url": "https://doi.org/10.1016/j.cortex.2022.09.008"
     },
     {
       "id": "pub_2021_covid_stroke",
       "year": 2021,
       "citation": "Naval-Baudin P, Rodriguez Caamaño I, Rubio-Maicas C, et al. COVID-19 and Ischemic Stroke: Clinical and Neuroimaging Findings. J Neuroimaging. 2021;31:62–66.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1111/jon.12790",
+      "url": "https://doi.org/10.1111/jon.12790"
     },
     {
       "id": "pub_2021_gbm_residual_enhancement",
@@ -743,61 +782,80 @@
       "citation": "Garcia-Ruiz A*, Naval-Baudin P*, Ligero M, et al. Precise enhancement quantification in post-operative MRI as an indicator of residual tumour impact is associated with survival in patients with glioblastoma. Sci Rep. 2021;11:695.",
       "author_note": "Joint first authors",
       "selected": true,
-      "url": "https://www.nature.com/articles/s41598-020-79829-3"
+      "doi": "10.1038/s41598-020-79829-3",
+      "url": "https://doi.org/10.1038/s41598-020-79829-3"
     },
     {
       "id": "pub_2021_brain_metastasis_edema",
       "year": 2021,
       "citation": "Alemany M, Domènech M, Argyriou AA, et al. Perilesional edema in brain metastases as predictive factor of response to systemic therapy in non-small cell lung cancer patients: a preliminary study. Ann Transl Med. 2021;9:648.",
-      "selected": false
+      "selected": false,
+      "doi": "10.21037/atm-20-6497",
+      "url": "https://doi.org/10.21037/atm-20-6497"
     },
     {
       "id": "pub_2021_autoimmune_encephalitis_epilepsy",
       "year": 2021,
       "citation": "Gifreu A, Falip M, Sala-Padró J, et al. Risk of Developing Epilepsy after Autoimmune Encephalitis. Brain Sci. 2021;11:1182.",
-      "selected": false
+      "selected": false,
+      "doi": "10.3390/brainsci11091182",
+      "url": "https://doi.org/10.3390/brainsci11091182"
     },
     {
       "id": "pub_2020_skull_vault_tumours",
       "year": 2020,
       "citation": "Pons Escoda A, Naval Baudin P, Mora P, et al. Imaging of skull vault tumours in adults. Insights Imaging. 2020;11:23.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1186/s13244-019-0820-9",
+      "url": "https://doi.org/10.1186/s13244-019-0820-9"
     },
     {
       "id": "pub_2020_neurologic_covid",
       "year": 2020,
       "citation": "Pons-Escoda A, Naval-Baudín P, Majós C, et al. Neurologic Involvement in COVID-19: Cause or Coincidence? A Neuroimaging Perspective. AJNR Am J Neuroradiol. 2020;41:1365–1369.",
-      "selected": false
+      "selected": false,
+      "doi": "10.3174/ajnr.a6627",
+      "url": "https://doi.org/10.3174/ajnr.a6627"
     },
     {
       "id": "pub_2020_pcns_lymphoma_curve",
       "year": 2020,
       "citation": "Pons-Escoda A, Garcia-Ruiz A, Naval-Baudin P, et al. Presurgical Identification of Primary CNS Lymphoma with Normalized Time-Intensity Curve: A Pilot Study of a New Method to Analyze DSC-PWI. AJNR Am J Neuroradiol. 2020;41:1816–1824.",
-      "selected": false
+      "selected": false,
+      "doi": "10.3174/ajnr.a6761",
+      "url": "https://doi.org/10.3174/ajnr.a6761"
     },
     {
       "id": "pub_2020_locus_coeruleus_depression",
       "year": 2020,
       "citation": "del Cerro I, Martínez-Zalacaín I, Guinea-Izquierdo A, et al. Locus coeruleus connectivity alterations in late-life major depressive disorder during a visual oddball task. Neuroimage Clin. 2020;28:102482.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1016/j.nicl.2020.102482",
+      "url": "https://doi.org/10.1016/j.nicl.2020.102482"
     },
     {
       "id": "pub_2018_invasive_sinonasal",
       "year": 2018,
       "citation": "Naval Baudin P, Pons Escoda A, Cos Domingo M, et al. Invasive Sinonasal Lesions: From the Nasal Fossa and Paranasal Sinuses to the Endocranium. Curr Probl Diagn Radiol. 2018;47:168–178.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1067/j.cpradiol.2017.04.001",
+      "url": "https://doi.org/10.1067/j.cpradiol.2017.04.001"
     },
     {
       "id": "pub_2017_zinner_syndrome",
       "year": 2017,
       "citation": "Naval-Baudin P, Carreño García E, Sanchez Marquez A, et al. Multicystic seminal vesicle with ipsilateral renal agenesis: two cases of Zinner syndrome. Scand J Urol. 2017;51:81–84.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1080/21681805.2016.1257650",
+      "url": "https://doi.org/10.1080/21681805.2016.1257650"
     },
     {
       "id": "pub_2017_pres_hydrocephalus",
       "year": 2017,
       "citation": "Naval Baudin P, Martínez Fernández T, Mora P, et al. Posterior reversible encephalopathy syndrome (PRES) with obstructive hydrocephalus. Diagn Interv Imaging. 2017;98:745–746.",
-      "selected": false
+      "selected": false,
+      "doi": "10.1016/j.diii.2017.03.006",
+      "url": "https://doi.org/10.1016/j.diii.2017.03.006"
     }
   ],
   "languages": [
