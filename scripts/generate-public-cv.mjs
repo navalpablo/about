@@ -23,7 +23,7 @@ const compact = (value) =>
 const publicCv = {
   metadata: {
     schema_name: "pablo_naval_baudin_public_cv",
-    schema_version: "1.0.0",
+    schema_version: "1.0.1",
     last_updated: master.metadata.last_updated,
     generated_from: master.metadata.schema_name,
   },
@@ -163,6 +163,7 @@ const publicCv = {
       citation: item.citation,
       author_note: item.author_note,
       selected: item.selected,
+      doi: item.doi,
       url: item.url,
     }),
   ),
