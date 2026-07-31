@@ -44,7 +44,7 @@ export default function Home() {
     .slice(0, 5);
   const highlightedProjects = cv.projects.slice(0, 4);
   const selectedPublications = cv.publications.filter((item) => item.selected);
-  const selectedTalks = cv.talks.slice(0, 6);
+  const selectedTalks = cv.talks;
   const recentAwards = cv.awards.slice(0, 6);
   const featuredMedia = cv.media.slice(0, 9);
   const selectedEducation = cv.education.filter((item) =>
