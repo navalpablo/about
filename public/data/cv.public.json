@@ -1,0 +1,829 @@
+{
+  "metadata": {
+    "schema_name": "pablo_naval_baudin_public_cv",
+    "schema_version": "1.0.0",
+    "last_updated": "2026-07-31",
+    "generated_from": "pablo_naval_baudin_cv_master"
+  },
+  "person": {
+    "full_name": "Pablo Naval Baudín",
+    "professional_name": "Pablo Naval-Baudin",
+    "credentials": [
+      "MD"
+    ],
+    "location": {
+      "city": "Barcelona",
+      "country": "Spain"
+    }
+  },
+  "profile": {
+    "headline": "Consultant Neuroradiologist · Clinical AI and Imaging Biomarkers",
+    "summary": "Consultant neuroradiologist and clinical researcher specialising in multiple sclerosis, neuro-oncology, X-linked adrenoleukodystrophy and presurgical functional mapping. Clinical Lead of the Bellvitge Radiomics Research and Transformation Team and Coordinator of SERAM's Artificial Intelligence Commission. Leads translational projects spanning imaging biomarkers, clinical AI implementation and radiology workflow redesign.",
+    "clinical_specialties": [
+      "Neuroradiology",
+      "Multiple sclerosis and demyelinating disease",
+      "Neuro-oncology",
+      "Head and neck imaging",
+      "Spinal imaging",
+      "Presurgical functional MRI and diffusion tractography",
+      "Clinical-trial MRI assessment"
+    ],
+    "research_specialties": [
+      "Imaging biomarkers",
+      "Clinical artificial intelligence implementation",
+      "Radiomics and quantitative neuroimaging",
+      "Multiple sclerosis prognosis",
+      "Brain tumour imaging",
+      "X-linked adrenoleukodystrophy",
+      "Radiology workflow redesign"
+    ]
+  },
+  "contacts": {
+    "email": "pablo@navalbaudin.com",
+    "linkedin": "https://www.linkedin.com/in/pablo-naval-baudin",
+    "x_twitter": "https://twitter.com/pnavalbaudin",
+    "google_scholar": "https://scholar.google.com/citations?user=tSmstmMAAAAJ&hl=en",
+    "orcid": "0000-0002-8714-0764",
+    "orcid_url": "https://orcid.org/0000-0002-8714-0764",
+    "web_of_science_researcher_id": "G-8597-2017",
+    "scopus_author_id": "57192197653",
+    "researchgate": "https://www.researchgate.net/profile/Pablo-Naval-Baudin"
+  },
+  "scientific_profile": {
+    "metrics_as_of": "2026-06",
+    "medline_indexed_publications": 33,
+    "h_index": {
+      "web_of_science": 12,
+      "scopus": 12,
+      "google_scholar": 14
+    },
+    "peer_review": {
+      "reviewer_since": {
+        "European Radiology": 2020
+      },
+      "journals": [
+        "European Radiology",
+        "Academic Radiology",
+        "Journal of Magnetic Resonance Imaging",
+        "Clinical Neuroradiology",
+        "AJNR"
+      ]
+    }
+  },
+  "appointments": [
+    {
+      "id": "appt_idi_bellvitge_consultant",
+      "title": "Consultant Neuroradiologist",
+      "organization": "Institut de Diagnòstic per la Imatge (IDI), Hospital Universitari de Bellvitge",
+      "location": "Barcelona, Spain",
+      "start_date": "2018-05",
+      "current": true,
+      "details": [
+        "Attending specialist in a tertiary neuroradiology service with activity in neuro-oncology, multiple sclerosis, stroke, trauma, head and neck, and spine imaging.",
+        "Clinical collaborator in the multidisciplinary functional brain mapping unit using fMRI and diffusion tractography."
+      ]
+    },
+    {
+      "id": "appt_quironsalud_consultant",
+      "title": "Consultant Neuroradiologist",
+      "organization": "Hospital Quirónsalud Barcelona",
+      "location": "Barcelona, Spain",
+      "start_date": "2020-06",
+      "current": true,
+      "details": [
+        "Brain, head and neck, and spinal imaging.",
+        "Clinical-trial MRI reporting using RANO, RECIST and related oncological response criteria."
+      ]
+    },
+    {
+      "id": "appt_bellvitge_radiomics_lead",
+      "title": "Clinical Lead, Radiomics Research and Transformation Team",
+      "organization": "Department of Radiology, Hospital Universitari de Bellvitge",
+      "location": "Barcelona, Spain",
+      "start_date": "2022-08",
+      "current": true,
+      "details": [
+        "Leads clinical digital transformation, AI implementation, radiomics and quantitative imaging projects."
+      ]
+    },
+    {
+      "id": "appt_idibell_clinical_researcher",
+      "title": "Clinical Researcher",
+      "organization": "Bellvitge Translational Imaging Biomarkers Group, Institut d'Investigació Biomèdica de Bellvitge (IDIBELL)",
+      "location": "Barcelona, Spain",
+      "start_date": "2024-02",
+      "current": true
+    },
+    {
+      "id": "appt_ucl_honorary_research_fellow",
+      "title": "Honorary Research Fellow",
+      "organization": "Department of Neuroinflammation, Queen Square Institute of Neurology, University College London",
+      "location": "Remote / London, United Kingdom",
+      "start_date": "2025-11",
+      "current": true,
+      "details": [
+        "Research on multiple-sclerosis neuroimaging biomarkers."
+      ]
+    },
+    {
+      "id": "appt_tmc_neuroradiologist",
+      "title": "Neuroradiologist",
+      "organization": "Telemedicine Clinic, UK Reporting Team",
+      "location": "Remote",
+      "start_date": "2019-09",
+      "end_date": "2022-03",
+      "current": false,
+      "details": [
+        "Remote diagnostic neuroradiology services for UK hospitals."
+      ]
+    }
+  ],
+  "leadership": [
+    {
+      "id": "role_seram_ai_commission_coordinator",
+      "title": "Coordinator, Artificial Intelligence Commission",
+      "organization": "Spanish Society of Medical Radiology (SERAM)",
+      "start_date": "2026-07",
+      "current": true
+    },
+    {
+      "id": "role_seram_2026_congress_leadership",
+      "title": "Leadership Roles, 38th SERAM National Congress",
+      "organization": "Spanish Society of Medical Radiology (SERAM)",
+      "location": "Valencia, Spain",
+      "start_date": "2025",
+      "end_date": "2026",
+      "current": false,
+      "subroles": [
+        "Innovation and Information Technology Lead, Scientific Committee",
+        "Head of the Biotechnology and Artificial Intelligence Committee",
+        "Member, Oncologic Imaging Section"
+      ],
+      "url": "https://www.seram2026.com/comite-miembros/"
+    },
+    {
+      "id": "role_senr_young_committee",
+      "title": "Member, Young Committee",
+      "organization": "Spanish Society of Neuroradiology (SENR)",
+      "start_date": "2025",
+      "current": true,
+      "url": "https://www.senr.org/senrjoven/"
+    },
+    {
+      "id": "role_ub_ai_radiology_master",
+      "title": "Course Lecturer and Project Mentor",
+      "organization": "Master's Degree in Artificial Intelligence in Radiology, Universitat de Barcelona",
+      "years": [
+        2024,
+        2025
+      ],
+      "url": "https://www.ub.edu/catedres/sites/default/files/files/docs/2024-03/digital-health-cathedra-content-vfinal_0.pdf"
+    },
+    {
+      "id": "role_bellvitge_brain_mapping_course",
+      "title": "Lecturer and Scientific Committee Member",
+      "organization": "International Course on Brain Mapping, Hospital Universitari de Bellvitge",
+      "years": [
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "url": "https://www.formedika.com/en/news/news/675-barcelona-welcomes-the-7th-bellvitge-mapping-course-a-global-meeting-point-for-neurosurgeons"
+    },
+    {
+      "id": "role_bellvitge_residency_tutor",
+      "title": "Radiology Residency Tutor",
+      "organization": "Hospital Universitari de Bellvitge",
+      "start_date": "2021",
+      "current": true
+    },
+    {
+      "id": "role_bellvitge_residency_programme_coordinator",
+      "title": "Radiology Residency Programme Coordinator",
+      "organization": "Hospital Universitari de Bellvitge",
+      "start_date": "2025",
+      "current": true
+    }
+  ],
+  "education": [
+    {
+      "id": "edu_phd_ub",
+      "qualification": "PhD Candidate in Translational Medicine (Neurosciences)",
+      "institution": "Faculty of Medicine, Universitat de Barcelona",
+      "location": "Barcelona, Spain",
+      "start_date": "2022-09",
+      "current": true,
+      "focus": "Predictive neuroimaging biomarkers in multiple sclerosis"
+    },
+    {
+      "id": "edu_radiology_residency_bellvitge",
+      "qualification": "Radiology Residency and Specialist Training",
+      "institution": "Hospital Universitari de Bellvitge",
+      "location": "Barcelona, Spain",
+      "start_date": "2014-05",
+      "end_date": "2018-05",
+      "current": false
+    },
+    {
+      "id": "edu_unc_neuroradiology_rotation",
+      "qualification": "Visiting Rotation in Neuroradiology",
+      "institution": "University of North Carolina at Chapel Hill",
+      "location": "Chapel Hill, North Carolina, USA",
+      "start_date": "2017-09-01",
+      "end_date": "2017-11-30",
+      "current": false
+    },
+    {
+      "id": "edu_chuv_medical_elective",
+      "qualification": "Medical Elective",
+      "institution": "Centre Hospitalier Universitaire Vaudois",
+      "location": "Lausanne, Switzerland",
+      "start_date": "2012-08",
+      "end_date": "2012-11",
+      "current": false
+    },
+    {
+      "id": "edu_medical_degree_uab",
+      "qualification": "Degree in Medicine",
+      "institution": "Universitat Autònoma de Barcelona, Vall d'Hebron Teaching Unit",
+      "location": "Barcelona, Spain",
+      "start_date": "2007-09",
+      "end_date": "2013-06",
+      "current": false
+    }
+  ],
+  "research_lines": [
+    {
+      "id": "research_line_ms_biomarkers",
+      "title": "Imaging biomarkers for multiple-sclerosis diagnosis, prognosis and disability progression"
+    },
+    {
+      "id": "research_line_xald",
+      "title": "Prognostic imaging biomarkers in X-linked adrenoleukodystrophy"
+    },
+    {
+      "id": "research_line_brain_mapping",
+      "title": "Functional MRI and diffusion mapping for brain-tumour surgical planning"
+    },
+    {
+      "id": "research_line_clinical_ai",
+      "title": "Clinical AI implementation and radiology workflow transformation"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "contribution_t1_dark_rim",
+      "title": "T1 dark-rim sign",
+      "description": "Described and validated an accessible marker of chronic active inflammation in multiple sclerosis measurable on routine 3D T1-weighted MRI."
+    },
+    {
+      "id": "contribution_postcontrast_swi",
+      "title": "Post-contrast SWI for enhancing-lesion detection",
+      "description": "Demonstrated that post-contrast susceptibility-weighted imaging improves detection of enhancing multiple-sclerosis lesions."
+    },
+    {
+      "id": "contribution_3d_t1_tse",
+      "title": "3D T1 turbo spin echo for multiple-sclerosis follow-up",
+      "description": "Demonstrated improved detection of gadolinium-enhancing multiple-sclerosis lesions compared with 3D T1 turbo field echo."
+    },
+    {
+      "id": "contribution_clinical_ai_translation",
+      "title": "Clinical translation of quantitative imaging and AI",
+      "description": "Leads operational implementation of AI and computational imaging in radiology, including the ImaginEM pathway redesign."
+    }
+  ],
+  "projects": [
+    {
+      "id": "project_mspredict",
+      "title": "MSPredict: MS Prognosis through Advanced Imaging Analysis",
+      "role": "Project Lead",
+      "funder": "\"la Caixa\" Foundation",
+      "call": "CaixaImpulse Innovation in Health 2024",
+      "reference": "CI24-10486",
+      "start_date": "2024",
+      "end_date": "2026",
+      "description": "Development of a clinical decision-support tool to predict disability progression in multiple sclerosis through advanced machine learning and multimodal data integration.",
+      "url": "https://caixaresearch.org/es/convocatoria-caixaimpulse-innovacion-salud-2024-ia-predecir-esclerosis-multiple"
+    },
+    {
+      "id": "project_amn_dimethyl_fumarate",
+      "title": "Multi-omics Medicine to Understand Adrenomyeloneuropathy",
+      "role": "Collaborator",
+      "funder": "Instituto de Salud Carlos III",
+      "call": "Proyectos de Investigación en Salud",
+      "reference": "ICI21/00085",
+      "start_date": "2022",
+      "end_date": "2025",
+      "description": "Phase IIb/III multicentre placebo-controlled randomised trial of dimethyl fumarate. Contribution includes neuroimaging analysis, diffusion tractography and MR spectroscopy.",
+      "url": "https://portalfis.isciii.es/proyecto?idProyecto=ICI21/00085"
+    },
+    {
+      "id": "project_hipomem",
+      "title": "HIPOMEM: Role of the Hippocampus in Memory Processes in Temporal Lobe Epilepsy",
+      "role": "Collaborator",
+      "funder": "Ministry of Science and Innovation",
+      "call": "Ayudas para Incentivar la Consolidación Investigadora",
+      "reference": "CNS2022-136160",
+      "start_date": "2023",
+      "end_date": "2025",
+      "description": "Study of hippocampal memory function to support surgical planning in mesial temporal lobe epilepsy."
+    },
+    {
+      "id": "project_imaginem",
+      "title": "ImaginEM: AI-driven Redesign of the MRI Pathway in Multiple Sclerosis",
+      "role": "Project Coordinator",
+      "start_date": "2024",
+      "current": true,
+      "description": "Implementation and evaluation of AI-assisted longitudinal MRI review in the Bellvitge multiple-sclerosis pathway.",
+      "outcomes": [
+        "Winner of the 2026 IESE–Novartis Award, Category II (Presente digital).",
+        "Pilot evaluation included 89 paired MRI examinations and demonstrated a substantial increase in identified activity after neuroradiologist review with AI support."
+      ]
+    }
+  ],
+  "talks": [
+    {
+      "id": "talk_seram_advanced_diffusion_2026",
+      "title": "Advanced Diffusion: What Are We Missing?",
+      "role": "Invited lecturer",
+      "event": "38th SERAM National Congress",
+      "organization": "SERAM",
+      "location": "Valencia, Spain",
+      "date": "2026-05-21",
+      "notes": "Also moderator of seven scientific sessions.",
+      "url": "https://www.seram2026.com/programa/"
+    },
+    {
+      "id": "talk_esnr_fmri_workshop_2026",
+      "title": "Presurgical fMRI Hands-on Workshop",
+      "role": "Faculty",
+      "event": "4th ESNR Advanced Course in Diagnostic Neuroradiology on Glioma Imaging",
+      "organization": "European Society of Neuroradiology",
+      "location": "Madrid, Spain",
+      "date_start": "2026-06-11",
+      "date_end": "2026-06-13"
+    },
+    {
+      "id": "talk_radiolegs_innovation_panel_2026",
+      "title": "Innovation and Future Vision",
+      "role": "Panellist",
+      "event": "Radiology and Digital Health: Current Reality",
+      "organization": "Radiòlegs de Catalunya",
+      "location": "Girona, Spain",
+      "date": "2026-04-09",
+      "url": "https://www.radiolegs.org/?p=page/html/detallactivitat/id/29537/codi_entitat/044/tipus_entitat/s"
+    },
+    {
+      "id": "talk_canon_advanced_diffusion_2025",
+      "title": "Advanced Diffusion in Brain Tumors",
+      "role": "Invited webinar lecturer",
+      "event": "Radiomics and Advanced Neuroimaging in Neuro-oncology",
+      "organization": "Canon Medical Academy",
+      "location": "Online",
+      "date": "2025-06-26"
+    },
+    {
+      "id": "talk_seen_pituitary_radiomics_2025",
+      "title": "The Role of Radiomics in Pituitary and Neuroendocrine Tumours",
+      "role": "Invited lecturer",
+      "event": "XVII Annual Scientific Meeting of the Neuroendocrinology Knowledge Area",
+      "organization": "Spanish Society of Endocrinology and Nutrition",
+      "location": "Madrid, Spain",
+      "date": "2025-01-31",
+      "url": "https://www.seen.es/documentos/verDocumento/programa-xvii-neuroendo"
+    },
+    {
+      "id": "talk_ub_programming_components_2024",
+      "title": "Programming Languages and Technical Components",
+      "role": "Lecturer",
+      "event": "Introduction to Artificial Intelligence in Radiology",
+      "organization": "Universitat de Barcelona",
+      "location": "Barcelona, Spain",
+      "date": "2024-05-09",
+      "url": "https://www.ub.edu/catedres/es/actualidad/introduccion-la-inteligencia-artificial-en-radiologia"
+    },
+    {
+      "id": "talk_esnr_fmri_workshop_2022",
+      "title": "Hands-on fMRI Workshop",
+      "role": "Faculty",
+      "event": "3rd ESNR Advanced Course in Diagnostic Neuroradiology on Glioma Imaging",
+      "organization": "European Society of Neuroradiology",
+      "location": "Madrid, Spain",
+      "date": "2022-11-18",
+      "url": "https://www.esnr.org/en/3rd-advanced-course-in-diagnostic-neuroradiology-glioma-imaging/scientific-program/"
+    },
+    {
+      "id": "talk_ecr_ai_training_panel_2022",
+      "title": "How to Train Radiologists and Related Professionals in AI",
+      "role": "Invited panellist",
+      "event": "European Congress of Radiology 2022",
+      "organization": "European Society of Radiology",
+      "location": "Vienna, Austria",
+      "date": "2022-07-14"
+    }
+  ],
+  "awards": [
+    {
+      "id": "award_iese_novartis_imaginem_2026",
+      "year": 2026,
+      "award": "Winner, Category II (Presente digital)",
+      "organization": "IESE–Novartis Award for Operational Excellence in Healthcare Management",
+      "awarded_work": "ImaginEM: AI-driven redesign of the MRI pathway in multiple sclerosis",
+      "role": "Project Coordinator",
+      "url": "https://www.novartis.com/es-es/premios-iese-novartis-2026-la-excelencia-operativa-en-gestion-sanitaria"
+    },
+    {
+      "id": "award_seram_t1_drl_spms_2026",
+      "year": 2026,
+      "award": "Certificate of Merit",
+      "organization": "38th SERAM National Congress",
+      "awarded_work": "T1-dark rim: Can it predict secondary progressive multiple sclerosis?"
+    },
+    {
+      "id": "award_seram_prl_t1_2024",
+      "year": 2024,
+      "award": "Certificate of Merit",
+      "organization": "37th SERAM National Congress",
+      "awarded_work": "Quantifiable deeply hypointense foci on 3D T1 TFE are characteristic of paramagnetic-rim lesions in multiple sclerosis"
+    },
+    {
+      "id": "award_seram_postcontrast_swi_2021",
+      "year": 2021,
+      "award": "Magna Cum Laude",
+      "organization": "SERAM National Congress",
+      "awarded_work": "Post-contrast SWI in Multiple Sclerosis Follow-up MRI"
+    },
+    {
+      "id": "award_asnr_cjd_2020",
+      "year": 2020,
+      "award": "Certificate of Merit",
+      "organization": "American Society of Neuroradiology Annual Meeting",
+      "awarded_work": "MRI and PET/CT Findings in Creutzfeld-Jakob Disease: Differentiating Between Different Forms"
+    },
+    {
+      "id": "award_senr_ifof_2019",
+      "year": 2019,
+      "award": "Best Scientific Presentation Award",
+      "organization": "48th Annual Meeting, Spanish Society of Neuroradiology",
+      "awarded_work": "Assessment of the Effect of Temporal and Insular Lesions on the Inferior Fronto-Occipital Fascicle Using DTI and Tractography"
+    },
+    {
+      "id": "award_acram_lymphoma_perfusion_2019",
+      "year": 2019,
+      "award": "Best Scientific Presentation Award",
+      "organization": "Catalan Society of Radiology Annual Meeting",
+      "awarded_work": "Differentiation Between Primary CNS Lymphoma and Anaplastic Astrocytoma Using a Novel T2* Perfusion Curve Analysis Method"
+    },
+    {
+      "id": "award_rsna_eloquent_frontal_2018",
+      "year": 2018,
+      "award": "Certificate of Merit",
+      "organization": "Radiological Society of North America Annual Meeting",
+      "awarded_work": "Exploring Eloquent Frontal Areas by fMRI & DTI in Neurosurgical Patients"
+    },
+    {
+      "id": "award_senr_lymphoma_perfusion_2018",
+      "year": 2018,
+      "award": "Second Best Scientific Presentation Award",
+      "organization": "47th Annual Meeting, Spanish Society of Neuroradiology",
+      "awarded_work": "Differentiation Between Primary CNS Lymphoma and Anaplastic Astrocytoma Using a Novel Method for T2* Perfusion Curve Assessment"
+    },
+    {
+      "id": "award_airp_seram_scholarship_2018",
+      "year": 2018,
+      "award": "AIRP–SERAM Scholarship",
+      "organization": "AIRP / SERAM",
+      "awarded_work": "Scholarship to attend the four-week AIRP Radiologic Pathology Correlation Course in Maryland, USA"
+    },
+    {
+      "id": "award_rsna_skull_vault_2017",
+      "year": 2017,
+      "award": "Cum Laude",
+      "organization": "Radiological Society of North America Annual Meeting",
+      "awarded_work": "Imaging of Skull Vault Tumors in Adults: Diagnosing in No-man's Land"
+    },
+    {
+      "id": "award_ecr_invest_youth_2017",
+      "year": 2017,
+      "award": "ECR Invest in the Youth Scholarship",
+      "organization": "European Society of Radiology",
+      "awarded_work": "Scholarship to present scientific communications at ECR 2017 in Vienna"
+    },
+    {
+      "id": "award_aabip_chest_navigation_2016",
+      "year": 2016,
+      "award": "Third Best Scientific Presentation Award",
+      "organization": "AABIP–CHEST Annual Meeting",
+      "awarded_work": "Positive Airway Pressure-enhanced CT to Improve Virtual Bronchoscopic Navigation"
+    }
+  ],
+  "media": [
+    {
+      "id": "media_lavanguardia_ai_ms_2025",
+      "date": "2025-03-10",
+      "outlet": "La Vanguardia, Big Vang",
+      "title": "¿La IA permite predecir el curso de la esclerosis múltiple?",
+      "type": "Feature / interview",
+      "url": "https://www.lavanguardia.com/ciencia/20250310/10336481/ia-permite-predecir-curso-esclerosis-multiple.html"
+    },
+    {
+      "id": "media_lhospitalet_interview_2024",
+      "date": "2024-10-31",
+      "outlet": "TV L'Hospitalet",
+      "title": "L'Entrevista de l'Informatiu: Pablo Naval-Baudin, neurorradiòleg de l'Hospital de Bellvitge",
+      "type": "Television interview",
+      "url": "https://lhdigital.cat/programa/linformatiu/entrevista-informatiu/lentrevista-de-linformatiu-pablo-naval-baudin-neurorradioleg-de-lhospital-de-bellvitge/"
+    },
+    {
+      "id": "media_telecinco_ai_ms_2024",
+      "date": "2024-09-09",
+      "outlet": "Telecinco Informativos",
+      "title": "Un hospital de Barcelona, pionero en el uso de IA para tratar la Esclerosis Múltiple",
+      "type": "National television / online feature",
+      "url": "https://www.telecinco.es/noticias/ciencia-y-tecnologia/ia/20240909/pablo-naval-esclerosis-multiple-inteligencia-artificial-entrevista_18_013388636.html"
+    },
+    {
+      "id": "media_ondacero_ai_ms_2024",
+      "date": "2024-09-04",
+      "outlet": "Onda Cero Catalunya",
+      "title": "Interview on AI implementation in multiple-sclerosis imaging",
+      "type": "Radio interview",
+      "url": "https://open.spotify.com/episode/2CYzKSUPYqrPAJEfOsovh1?si=xAcEEHZjRmChOY8b5MTUUg&context=spotify:show:4n7146yQjsdF9hIHpg3VCd&t=3384"
+    },
+    {
+      "id": "media_lavanguardia_t1_dark_rim_2023",
+      "date": "2023-08-16",
+      "outlet": "La Vanguardia",
+      "title": "Un biomarcador de imagen puede ayudar a comprender y tratar mejor la esclerosis múltiple",
+      "type": "News feature",
+      "url": "https://www.lavanguardia.com/sociedad/20230816/9170571/biomarcador-imagen-ayudar-comprender-tratar-mejor-esclerosis-multiple.html"
+    },
+    {
+      "id": "media_redaccionmedica_ms_standardize_2023",
+      "date": "2023-09-11",
+      "outlet": "Redacción Médica",
+      "title": "La Neurología española avanza para estandarizar la esclerosis múltiple",
+      "type": "News feature",
+      "url": "https://www.redaccionmedica.com/secciones/neurologia/la-neurologia-espanola-avanza-para-estandarizar-la-esclerosis-multiple-4166"
+    },
+    {
+      "id": "media_catalunya_radio_ai_2023",
+      "date": "2023-03-04",
+      "outlet": "Catalunya Ràdio, Revolució 4.0",
+      "title": "Pablo Naval: La IA es pot aplicar a molts camps de la medicina",
+      "type": "Radio interview",
+      "url": "https://www.3cat.cat/3cat/pablo-naval-la-ia-es-pot-aplicar-a-molts-camps-de-la-medicina/audio/1164291/"
+    },
+    {
+      "id": "media_lavanguardia_radiomics_2023",
+      "date": "2023-02-20",
+      "outlet": "La Vanguardia",
+      "title": "Bellvitge busca lo que el ojo no ve en una resonancia magnética o un TAC",
+      "type": "News feature",
+      "url": "https://www.lavanguardia.com/vida/20230220/8769822/bellvitge-busca-ojo-ve-resonancia-magnetica-tac.html"
+    },
+    {
+      "id": "media_tv3_radiomics_2023",
+      "date": "2023-02-20",
+      "outlet": "TV3 Telenotícies",
+      "title": "La radiòmica: analitzar les imatges radiològiques amb els píxels imperceptibles per a l'ull humà",
+      "type": "Television news",
+      "url": "https://www.ccma.cat/tv3/alacarta/telenoticies/la-radiomica-analitzar-les-imatges-radiologiques-amb-els-pixels-imperceptibles-per-a-lull-huma/video/6204653/"
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub_2026_mcdonald_radiologia",
+      "year": 2026,
+      "citation": "Naval-Baudin P, Rovira A. Implicaciones Radiológicas de Los Criterios Revisados McDonald de 2024 Para La Esclerosis Múltiple. Radiología. 2026;501811.",
+      "selected": false
+    },
+    {
+      "id": "pub_2026_brain_volumetry_editorial",
+      "year": 2026,
+      "citation": "Naval-Baudin P, González-Montesinos M. Time to Tap into Clinical MRI for Brain Volumetry Research? European Radiology. 2026:2–4.",
+      "selected": false
+    },
+    {
+      "id": "pub_2025_3d_t1_tse_ms",
+      "year": 2025,
+      "citation": "Naval-Baudin P, Bermúdez Bravo WF, Pineda-Borja VI, et al. 3D T1 Turbo Spin Echo Improves Detection of Gadolinium-Enhancing Multiple-Sclerosis Lesions. Insights Imaging. 2025;16:212.",
+      "selected": true
+    },
+    {
+      "id": "pub_2025_postcontrast_swi_ms",
+      "year": 2025,
+      "citation": "Naval-Baudin P, Pérez-Alfonso K, Castillo-Pinar A, et al. Post-contrast Susceptibility Weighted Imaging in Multiple Sclerosis MRI Improves the Detection of Enhancing Lesions. Clin Neuroradiol. 2025;35:533–539.",
+      "selected": true
+    },
+    {
+      "id": "pub_2025_late_onset_mcdonald",
+      "year": 2025,
+      "citation": "Tena-Cucala R, Naval-Baudin P, Martínez-Yélamos A, et al. The 2024 McDonald criteria show comparable sensitivity to previous criteria for late-onset multiple sclerosis. Mult Scler Relat Disord. 2025;103:106658.",
+      "selected": false
+    },
+    {
+      "id": "pub_2025_image_analysis_neuroradiology",
+      "year": 2025,
+      "citation": "Pareto D, Naval-Baudin P, Pons-Escoda A, et al. Image analysis research in neuroradiology: bridging clinical and technical domains. Neuroradiology. 2025;67:1649–1666.",
+      "selected": false
+    },
+    {
+      "id": "pub_2025_gadolinium_glioma_followup",
+      "year": 2025,
+      "citation": "Naval-Baudin P, Pons-Escoda A. Reconsidering gadolinium in long-term glioma follow-up: is contrast always and unquestionably necessary? Eur Radiol. 2025;35:5203–5205.",
+      "selected": false
+    },
+    {
+      "id": "pub_2024_deep_t1_prl",
+      "year": 2024,
+      "citation": "Naval-Baudin P, Pons-Escoda A, Camins À, et al. Deeply 3D-T1-TFE hypointense voxels are characteristic of phase-rim lesions in multiple sclerosis. Eur Radiol. 2024;34:1337–1345.",
+      "selected": true,
+      "url": "https://link.springer.com/article/10.1007/s00330-023-09784-w"
+    },
+    {
+      "id": "pub_2024_t1_dark_rim",
+      "year": 2024,
+      "citation": "Naval-Baudin P, Pons-Escoda A, Castillo-Pinar A, et al. The T1-dark-rim: A novel imaging sign for detecting smoldering inflammation in multiple sclerosis. Eur J Radiol. 2024;173:111358.",
+      "selected": true,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0720048X24000743"
+    },
+    {
+      "id": "pub_2024_ms_biomarkers_need",
+      "year": 2024,
+      "citation": "Naval-Baudin P, Arroyo-Pereiro P, Majós C. The pressing need for imaging biomarkers of disability progression in multiple sclerosis. Eur Radiol. 2024;34:3823–3825.",
+      "selected": true,
+      "url": "https://link.springer.com/article/10.1007/s00330-023-10459-9"
+    },
+    {
+      "id": "pub_2024_deep_learning_perfusion",
+      "year": 2024,
+      "citation": "Garcia-Ruiz A, Pons-Escoda A, Grussu F, et al. An accessible deep learning tool for voxel-wise classification of brain malignancies from perfusion MRI. Cell Rep Med. 2024;5:101464.",
+      "selected": false
+    },
+    {
+      "id": "pub_2024_dsc_idh_1p19q",
+      "year": 2024,
+      "citation": "Pons-Escoda A, Garcia-Ruiz A, Naval-Baudin P, et al. Differentiating IDH-mutant astrocytomas and 1p19q-codeleted oligodendrogliomas using DSC-PWI: high performance through cerebral blood volume and percentage of signal recovery percentiles. Eur Radiol. 2024;34:5320–5330.",
+      "selected": false
+    },
+    {
+      "id": "pub_2024_mrs_astrocytoma",
+      "year": 2024,
+      "citation": "Majós C, Pons-Escoda A, Naval P, et al. Proton MR spectroscopy shows improved performance to segregate high-grade astrocytoma subgroups when defined with the new 2021 WHO classification of CNS tumours. Eur Radiol. 2024;34:2174–2182.",
+      "selected": false
+    },
+    {
+      "id": "pub_2024_dsc_grade4_young_adults",
+      "year": 2024,
+      "citation": "Pons-Escoda A, Naval-Baudin P, Viveros M, et al. DSC-PWI presurgical differentiation of grade 4 astrocytoma and glioblastoma in young adults: rCBV percentile analysis across enhancing and non-enhancing regions. Neuroradiology. 2024;66:1267–1277.",
+      "selected": false
+    },
+    {
+      "id": "pub_2024_noddi_editorial",
+      "year": 2024,
+      "citation": "Naval-Baudin P, Pons-Escoda A. Pushing the Envelope: advanced imaging-data-analysis meets NODDI to differentiate glioblastoma and brain metastasis. Eur Radiol. 2024;34:6614–6615.",
+      "selected": false
+    },
+    {
+      "id": "pub_2023_cerebellar_tumour_perfusion",
+      "year": 2023,
+      "citation": "Pons-Escoda A, Garcia-Ruiz A, Garcia-Hidalgo C, et al. MR dynamic-susceptibility-contrast perfusion metrics in the presurgical discrimination of adult solitary intra-axial cerebellar tumours. Eur Radiol. 2023;33:9120–9129.",
+      "selected": false
+    },
+    {
+      "id": "pub_2023_cns_lymphoma_review",
+      "year": 2023,
+      "citation": "Pons-Escoda A, Naval-Baudin P, Velasco R, et al. Imaging of Lymphomas Involving the CNS: An Update-Review of the Full Spectrum of Disease with an Emphasis on the WHO Classifications of CNS Tumors 2021 and Hematolymphoid Tumors 2022. AJNR Am J Neuroradiol. 2023;44:358–366.",
+      "selected": true
+    },
+    {
+      "id": "pub_2023_eating_induced_seizures",
+      "year": 2023,
+      "citation": "Tena-Cucala R, Sala-Padró J, Jaraba S, et al. Eating-induced seizures: A semiological sign of the right temporal pole. Epileptic Disord. 2023;25:480–491.",
+      "selected": false
+    },
+    {
+      "id": "pub_2022_dsc_time_intensity_curves",
+      "year": 2022,
+      "citation": "Pons-Escoda A, Garcia-Ruiz A, Naval-Baudin P, et al. Voxel-level analysis of normalized DSC-PWI time-intensity curves: a potential generalizable approach and its proof of concept in discriminating glioblastoma and metastasis. Eur Radiol. 2022.",
+      "selected": false
+    },
+    {
+      "id": "pub_2022_ifof_gliomas",
+      "year": 2022,
+      "citation": "Camins À, Naval-Baudin P, Majós C, et al. Inferior fronto-occipital fascicle displacement in temporoinsular gliomas using diffusion tensor imaging. J Neuroimaging. 2022;32:638–646.",
+      "selected": false
+    },
+    {
+      "id": "pub_2022_ebv_pcns_lymphoma",
+      "year": 2022,
+      "citation": "Pons-Escoda A, García-Ruíz A, Naval-Baudin P, et al. Diffuse Large B-Cell Epstein-Barr Virus-Positive Primary CNS Lymphoma in Non-AIDS Patients: High Diagnostic Accuracy of DSC Perfusion Metrics. AJNR Am J Neuroradiol. 2022;43:1567–1574.",
+      "selected": false
+    },
+    {
+      "id": "pub_2022_anterior_insula_self_monitoring",
+      "year": 2022,
+      "citation": "Gomez-Andres A, Cunillera T, Rico I, et al. The role of the anterior insular cortex in self-monitoring: A novel study protocol with electrical stimulation mapping and functional magnetic resonance imaging. Cortex. 2022;157:231–244.",
+      "selected": false
+    },
+    {
+      "id": "pub_2021_covid_stroke",
+      "year": 2021,
+      "citation": "Naval-Baudin P, Rodriguez Caamaño I, Rubio-Maicas C, et al. COVID-19 and Ischemic Stroke: Clinical and Neuroimaging Findings. J Neuroimaging. 2021;31:62–66.",
+      "selected": false
+    },
+    {
+      "id": "pub_2021_gbm_residual_enhancement",
+      "year": 2021,
+      "citation": "Garcia-Ruiz A*, Naval-Baudin P*, Ligero M, et al. Precise enhancement quantification in post-operative MRI as an indicator of residual tumour impact is associated with survival in patients with glioblastoma. Sci Rep. 2021;11:695.",
+      "author_note": "Joint first authors",
+      "selected": true,
+      "url": "https://www.nature.com/articles/s41598-020-79829-3"
+    },
+    {
+      "id": "pub_2021_brain_metastasis_edema",
+      "year": 2021,
+      "citation": "Alemany M, Domènech M, Argyriou AA, et al. Perilesional edema in brain metastases as predictive factor of response to systemic therapy in non-small cell lung cancer patients: a preliminary study. Ann Transl Med. 2021;9:648.",
+      "selected": false
+    },
+    {
+      "id": "pub_2021_autoimmune_encephalitis_epilepsy",
+      "year": 2021,
+      "citation": "Gifreu A, Falip M, Sala-Padró J, et al. Risk of Developing Epilepsy after Autoimmune Encephalitis. Brain Sci. 2021;11:1182.",
+      "selected": false
+    },
+    {
+      "id": "pub_2020_skull_vault_tumours",
+      "year": 2020,
+      "citation": "Pons Escoda A, Naval Baudin P, Mora P, et al. Imaging of skull vault tumours in adults. Insights Imaging. 2020;11:23.",
+      "selected": false
+    },
+    {
+      "id": "pub_2020_neurologic_covid",
+      "year": 2020,
+      "citation": "Pons-Escoda A, Naval-Baudín P, Majós C, et al. Neurologic Involvement in COVID-19: Cause or Coincidence? A Neuroimaging Perspective. AJNR Am J Neuroradiol. 2020;41:1365–1369.",
+      "selected": false
+    },
+    {
+      "id": "pub_2020_pcns_lymphoma_curve",
+      "year": 2020,
+      "citation": "Pons-Escoda A, Garcia-Ruiz A, Naval-Baudin P, et al. Presurgical Identification of Primary CNS Lymphoma with Normalized Time-Intensity Curve: A Pilot Study of a New Method to Analyze DSC-PWI. AJNR Am J Neuroradiol. 2020;41:1816–1824.",
+      "selected": false
+    },
+    {
+      "id": "pub_2020_locus_coeruleus_depression",
+      "year": 2020,
+      "citation": "del Cerro I, Martínez-Zalacaín I, Guinea-Izquierdo A, et al. Locus coeruleus connectivity alterations in late-life major depressive disorder during a visual oddball task. Neuroimage Clin. 2020;28:102482.",
+      "selected": false
+    },
+    {
+      "id": "pub_2018_invasive_sinonasal",
+      "year": 2018,
+      "citation": "Naval Baudin P, Pons Escoda A, Cos Domingo M, et al. Invasive Sinonasal Lesions: From the Nasal Fossa and Paranasal Sinuses to the Endocranium. Curr Probl Diagn Radiol. 2018;47:168–178.",
+      "selected": false
+    },
+    {
+      "id": "pub_2017_zinner_syndrome",
+      "year": 2017,
+      "citation": "Naval-Baudin P, Carreño García E, Sanchez Marquez A, et al. Multicystic seminal vesicle with ipsilateral renal agenesis: two cases of Zinner syndrome. Scand J Urol. 2017;51:81–84.",
+      "selected": false
+    },
+    {
+      "id": "pub_2017_pres_hydrocephalus",
+      "year": 2017,
+      "citation": "Naval Baudin P, Martínez Fernández T, Mora P, et al. Posterior reversible encephalopathy syndrome (PRES) with obstructive hydrocephalus. Diagn Interv Imaging. 2017;98:745–746.",
+      "selected": false
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "level": "Native"
+    },
+    {
+      "language": "Catalan",
+      "level": "Native / bilingual"
+    },
+    {
+      "language": "English",
+      "level": "C2",
+      "evidence": [
+        "IELTS 8.5/9",
+        "TOEFL iBT 117/120"
+      ]
+    },
+    {
+      "language": "French",
+      "level": "C1"
+    },
+    {
+      "language": "German",
+      "level": "B1"
+    }
+  ]
+}
