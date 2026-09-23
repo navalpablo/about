@@ -51,7 +51,7 @@
   },
   "scientific_profile": {
     "metrics_as_of": "2026-06",
-    "medline_indexed_publications": 33,
+    "medline_indexed_publications": 34,
     "h_index": {
       "web_of_science": 12,
       "scopus": 12,
@@ -69,7 +69,8 @@
         "AJNR"
       ]
     },
-    "google_scholar_as_of": "2026-09"
+    "google_scholar_as_of": "2026-09",
+    "publications_as_of": "2026-09"
   },
   "appointments": [
     {
@@ -270,6 +271,33 @@
   ],
   "projects": [
     {
+      "id": "project_mspredict",
+      "title": "MSPredict: MS Prognosis through Advanced Imaging Analysis",
+      "role": "Principal Investigator",
+      "funder": "\"la Caixa\" Foundation",
+      "call": "CaixaImpulse Innovation in Health 2024",
+      "reference": "CI24-10486",
+      "start_date": "2024",
+      "end_date": "2026",
+      "description": "Development of a clinical decision-support tool to predict disability progression in multiple sclerosis through advanced machine learning and multimodal data integration.",
+      "url": "https://caixaresearch.org/es/convocatoria-caixaimpulse-innovacion-salud-2024-ia-predecir-esclerosis-multiple",
+      "funding_eur": 51000
+    },
+    {
+      "id": "project_imaginem",
+      "title": "ImaginEM: AI-driven Redesign of the MRI Pathway in Multiple Sclerosis",
+      "role": "Project Coordinator",
+      "type": "Clinical AI implementation and workflow transformation",
+      "start_date": "2024",
+      "current": true,
+      "description": "Implementation and evaluation of AI-assisted longitudinal MRI review in the Bellvitge multiple-sclerosis pathway.",
+      "outcomes": [
+        "Winner of the 2026 IESE–Novartis Award, Category II (Presente digital).",
+        "Pilot evaluation included 89 paired MRI examinations and demonstrated a substantial increase in identified activity after neuroradiologist review with AI support."
+      ],
+      "highlight": "Pilot: 89 paired MRI examinations · IESE–Novartis award, 2026."
+    },
+    {
       "id": "project_ia_ictus",
       "title": "IA-ICTUS: Independent Validation of the Siemens-Methinks Stroke Suite",
       "role": "Project Coordinator; Reference-Standard and Ground-Truth Lead",
@@ -281,16 +309,11 @@
       "description": "Internal IDI project providing an independent pre-deployment validation of the Siemens-Methinks Stroke Suite before regional deployment in CatSalut. Coordinated the multicentre study and the neuroradiologist reference-standard process, including blinded double reading and adjudication."
     },
     {
-      "id": "project_mspredict",
-      "title": "MSPredict: MS Prognosis through Advanced Imaging Analysis",
-      "role": "Project Lead",
-      "funder": "\"la Caixa\" Foundation",
-      "call": "CaixaImpulse Innovation in Health 2024",
-      "reference": "CI24-10486",
-      "start_date": "2024",
-      "end_date": "2026",
-      "description": "Development of a clinical decision-support tool to predict disability progression in multiple sclerosis through advanced machine learning and multimodal data integration.",
-      "url": "https://caixaresearch.org/es/convocatoria-caixaimpulse-innovacion-salud-2024-ia-predecir-esclerosis-multiple"
+      "id": "project_brain_tumor_perfunomics",
+      "title": "Brain Tumor Perfunomics",
+      "role": "Contributor",
+      "principal_investigator": "Albert Pons-Escoda",
+      "description": "Research and innovation in brain-tumour imaging within the Bellvitge Radiomics team."
     },
     {
       "id": "project_amn_dimethyl_fumarate",
@@ -314,19 +337,6 @@
       "start_date": "2023",
       "end_date": "2025",
       "description": "Study of hippocampal memory function to support surgical planning in mesial temporal lobe epilepsy."
-    },
-    {
-      "id": "project_imaginem",
-      "title": "ImaginEM: AI-driven Redesign of the MRI Pathway in Multiple Sclerosis",
-      "role": "Project Coordinator",
-      "type": "Clinical AI implementation and workflow transformation",
-      "start_date": "2024",
-      "current": true,
-      "description": "Implementation and evaluation of AI-assisted longitudinal MRI review in the Bellvitge multiple-sclerosis pathway.",
-      "outcomes": [
-        "Winner of the 2026 IESE–Novartis Award, Category II (Presente digital).",
-        "Pilot evaluation included 89 paired MRI examinations and demonstrated a substantial increase in identified activity after neuroradiologist review with AI support."
-      ]
     }
   ],
   "talks": [

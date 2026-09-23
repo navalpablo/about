@@ -53,6 +53,7 @@ const publicCv = {
   },
   scientific_profile: {
     metrics_as_of: master.scientific_profile.metrics_as_of,
+    publications_as_of: master.scientific_profile.publications_as_of,
     google_scholar_as_of: master.scientific_profile.google_scholar_as_of,
     medline_indexed_publications:
       master.scientific_profile.medline_indexed_publications,
@@ -108,6 +109,9 @@ const publicCv = {
         type: item.type,
         institution: item.institution,
         funder: item.funder,
+        funding_eur: item.funding_eur,
+        principal_investigator: item.principal_investigator,
+        highlight: item.highlight,
         call: item.call,
         reference: item.reference,
         start_date: item.start_date,

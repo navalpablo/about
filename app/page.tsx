@@ -43,6 +43,19 @@ const formatProjectRange = (project: {
   return `${start}–${end}`;
 };
 
+type Project = (typeof cv.projects)[number] & {
+  funding_eur?: number;
+  principal_investigator?: string;
+  highlight?: string;
+};
+
+const formatFunding = (amount: number) =>
+  new Intl.NumberFormat("en-GB", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 0,
+  }).format(amount);
+
 const externalLink = {
   target: "_blank",
   rel: "noreferrer",
@@ -56,7 +69,8 @@ export default function Home() {
         item.current || item.id === "role_seram_2026_congress_leadership",
     )
     .slice(0, 5);
-  const highlightedProjects = cv.projects;
+  const highlightedProjects: Project[] = cv.projects;
+  const mspredict = highlightedProjects.find((project) => project.id === "project_mspredict");
   const selectedPublications = cv.publications.filter((item) => item.selected);
   const selectedTalks = cv.talks;
   const recentAwards = cv.awards.slice(0, 6);
@@ -124,13 +138,15 @@ export default function Home() {
                 <dt>{cv.scientific_profile.h_index.google_scholar}</dt>
                 <dd>Google Scholar h-index</dd>
               </div>
-              <div>
-                <dt>{cv.research_lines.length}</dt>
-                <dd>active research lines</dd>
-              </div>
+              {mspredict?.funding_eur ? (
+                <div>
+                  <dt>{formatFunding(mspredict.funding_eur)}</dt>
+                  <dd>MSPredict project funding · PI</dd>
+                </div>
+              ) : null}
             </dl>
             <p className="metric-note">
-              Google Scholar h-index updated {cv.scientific_profile.google_scholar_as_of ?? cv.scientific_profile.metrics_as_of}; publication count {cv.scientific_profile.metrics_as_of}
+              Google Scholar h-index updated {cv.scientific_profile.google_scholar_as_of ?? cv.scientific_profile.metrics_as_of}; publication count {cv.scientific_profile.publications_as_of ?? cv.scientific_profile.metrics_as_of}
             </p>
           </aside>
         </section>
@@ -213,7 +229,18 @@ export default function Home() {
                       .filter(Boolean)
                       .join(" · ")}
                   </p>
+                  {project.principal_investigator ? (
+                    <p className="item-detail">Principal Investigator: {project.principal_investigator}</p>
+                  ) : null}
                   <p>{project.description}</p>
+                  {project.funding_eur ? (
+                    <p className="item-detail">
+                      {formatFunding(project.funding_eur)} project funding · {project.call} · {project.funder}
+                    </p>
+                  ) : null}
+                  {project.highlight ? (
+                    <p className="item-detail">{project.highlight}</p>
+                  ) : null}
                 </div>
               </article>
             ))}
@@ -274,7 +301,7 @@ export default function Home() {
             </a>
             <span>
               {cv.scientific_profile.medline_indexed_publications} peer-reviewed
-              publications ({cv.scientific_profile.metrics_as_of}) · Google Scholar h-index {cv.scientific_profile.h_index.google_scholar} ({cv.scientific_profile.google_scholar_as_of ?? cv.scientific_profile.metrics_as_of})
+              publications ({cv.scientific_profile.publications_as_of ?? cv.scientific_profile.metrics_as_of}) · Google Scholar h-index {cv.scientific_profile.h_index.google_scholar} ({cv.scientific_profile.google_scholar_as_of ?? cv.scientific_profile.metrics_as_of})
             </span>
           </div>
         </section>
