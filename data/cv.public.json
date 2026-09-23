@@ -2,7 +2,7 @@
   "metadata": {
     "schema_name": "pablo_naval_baudin_public_cv",
     "schema_version": "1.0.3",
-    "last_updated": "2026-07-31",
+    "last_updated": "2026-09-23",
     "generated_from": "pablo_naval_baudin_cv_master"
   },
   "person": {
@@ -55,7 +55,7 @@
     "h_index": {
       "web_of_science": 12,
       "scopus": 12,
-      "google_scholar": 14
+      "google_scholar": 15
     },
     "peer_review": {
       "reviewer_since": {
@@ -68,7 +68,8 @@
         "Clinical Neuroradiology",
         "AJNR"
       ]
-    }
+    },
+    "google_scholar_as_of": "2026-09"
   },
   "appointments": [
     {
@@ -582,6 +583,14 @@
     }
   ],
   "publications": [
+    {
+      "id": "pub_2026_dsc_pwi_brain_tumours",
+      "year": 2026,
+      "citation": "García-Hidalgo C, Naval-Baudin P, García-García JI, et al. Dynamic susceptibility contrast perfusion-weighted imaging (DSC-PWI) vascular and metabolic biomarkers for presurgical diagnosis of adult brain tumors across different acquisition parameters. Eur J Radiol. 2026;205:113218.",
+      "selected": true,
+      "doi": "10.1016/j.ejrad.2026.113218",
+      "url": "https://doi.org/10.1016/j.ejrad.2026.113218"
+    },
     {
       "id": "pub_2026_mcdonald_radiologia",
       "year": 2026,

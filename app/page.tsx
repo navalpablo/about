@@ -130,7 +130,7 @@ export default function Home() {
               </div>
             </dl>
             <p className="metric-note">
-              Metrics updated {cv.scientific_profile.metrics_as_of}
+              Google Scholar h-index updated {cv.scientific_profile.google_scholar_as_of ?? cv.scientific_profile.metrics_as_of}; publication count {cv.scientific_profile.metrics_as_of}
             </p>
           </aside>
         </section>
@@ -274,7 +274,7 @@ export default function Home() {
             </a>
             <span>
               {cv.scientific_profile.medline_indexed_publications} peer-reviewed
-              publications · h-index {cv.scientific_profile.h_index.google_scholar}
+              publications ({cv.scientific_profile.metrics_as_of}) · Google Scholar h-index {cv.scientific_profile.h_index.google_scholar} ({cv.scientific_profile.google_scholar_as_of ?? cv.scientific_profile.metrics_as_of})
             </span>
           </div>
         </section>

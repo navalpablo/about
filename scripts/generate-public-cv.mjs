@@ -53,6 +53,7 @@ const publicCv = {
   },
   scientific_profile: {
     metrics_as_of: master.scientific_profile.metrics_as_of,
+    google_scholar_as_of: master.scientific_profile.google_scholar_as_of,
     medline_indexed_publications:
       master.scientific_profile.medline_indexed_publications,
     h_index: master.scientific_profile.h_index,
