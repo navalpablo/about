@@ -18,7 +18,7 @@
   },
   "profile": {
     "headline": "Consultant Neuroradiologist · Clinical AI and Imaging Biomarkers",
-    "summary": "Consultant neuroradiologist and clinical researcher specialising in multiple sclerosis, neuro-oncology, X-linked adrenoleukodystrophy and presurgical functional mapping. Clinical Lead of the Bellvitge Radiomics Research and Transformation Team and Coordinator of SERAM's Artificial Intelligence Commission. Leads translational projects spanning imaging biomarkers, clinical AI implementation and radiology workflow redesign.",
+    "summary": "Consultant neuroradiologist and clinical researcher specialising in multiple sclerosis, neuro-oncology, X-linked adrenoleukodystrophy and presurgical functional mapping. Leads translational projects spanning imaging biomarkers, clinical AI implementation and radiology workflow redesign.",
     "clinical_specialties": [
       "Neuroradiology",
       "Multiple sclerosis and demyelinating disease",
@@ -319,6 +319,8 @@
       "id": "project_amn_dimethyl_fumarate",
       "title": "Multi-omics Medicine to Understand Adrenomyeloneuropathy",
       "role": "Collaborator",
+      "principal_investigator": "Aurora Pujol Onofre",
+      "funding_eur": 817000,
       "funder": "Instituto de Salud Carlos III",
       "call": "Proyectos de Investigación en Salud",
       "reference": "ICI21/00085",
@@ -326,17 +328,6 @@
       "end_date": "2025",
       "description": "Phase IIb/III multicentre placebo-controlled randomised trial of dimethyl fumarate. Contribution includes neuroimaging analysis, diffusion tractography and MR spectroscopy.",
       "url": "https://portalfis.isciii.es/proyecto?idProyecto=ICI21/00085"
-    },
-    {
-      "id": "project_hipomem",
-      "title": "HIPOMEM: Role of the Hippocampus in Memory Processes in Temporal Lobe Epilepsy",
-      "role": "Collaborator",
-      "funder": "Ministry of Science and Innovation",
-      "call": "Ayudas para Incentivar la Consolidación Investigadora",
-      "reference": "CNS2022-136160",
-      "start_date": "2023",
-      "end_date": "2025",
-      "description": "Study of hippocampal memory function to support surgical planning in mesial temporal lobe epilepsy."
     }
   ],
   "talks": [

@@ -37,6 +37,19 @@ npm run dev
 Pushes to `main` trigger the GitHub Actions workflow that builds and deploys
 the static site under `/about/`.
 
+In **Settings → Pages → Build and deployment**, the **Source must be GitHub
+Actions**. Do not enable branch publishing: its Jekyll deployment publishes
+the README and can overwrite the Next.js site.
+
+The workflow checks the static export before uploading it and verifies that
+the live URL serves the same commit and its compiled CSS after deployment.
+To run the export check locally:
+
+```sh
+npm run pages:build
+node scripts/verify-pages.mjs
+```
+
 ## Author
 
 Pablo Naval Baudín

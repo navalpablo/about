@@ -62,7 +62,23 @@ const externalLink = {
 } as const;
 
 export default function Home() {
-  const currentAppointments = cv.appointments.filter((item) => item.current);
+  const appointmentOrder = ["appt_idi_bellvitge_consultant", "appt_bellvitge_radiomics_lead"];
+  const currentAppointments = cv.appointments
+    .filter((item) => item.current)
+    .sort((a, b) => {
+      const rank = (id: string) => {
+        const index = appointmentOrder.indexOf(id);
+        return index < 0 ? appointmentOrder.length : index;
+      };
+      return rank(a.id) - rank(b.id);
+    });
+  const bellvitgeLead = currentAppointments.find(
+    (item) => item.id === "appt_bellvitge_radiomics_lead",
+  );
+  const seramRole = cv.leadership.find(
+    (item) => item.id === "role_seram_ai_commission_coordinator",
+  );
+  const teachingRoles = cv.leadership.filter((item) => item.years);
   const highlightedLeadership = cv.leadership
     .filter(
       (item) =>
@@ -90,14 +106,15 @@ export default function Home() {
           PNB
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#research">Research</a>
+          <a href="#work">Experience</a>
+          <a href="#research">Projects</a>
           <a href="#publications">Publications</a>
-          <a href="#profile">Profile</a>
+          <a href="#profile">Teaching &amp; recognition</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
-      <main id="top">
+      <main id="top" data-cv-build={process.env.GITHUB_SHA ?? "local"}>
         <section className="hero shell" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">Neuroradiology · Barcelona</p>
@@ -127,27 +144,28 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="hero-aside" aria-label="Research profile summary">
-            <p className="aside-label">At a glance</p>
-            <dl className="metrics">
-              <div>
-                <dt>{cv.scientific_profile.medline_indexed_publications}</dt>
-                <dd>peer-reviewed publications</dd>
-              </div>
-              <div>
-                <dt>{cv.scientific_profile.h_index.google_scholar}</dt>
-                <dd>Google Scholar h-index</dd>
-              </div>
-              {mspredict?.funding_eur ? (
-                <div>
-                  <dt>{formatFunding(mspredict.funding_eur)}</dt>
-                  <dd>MSPredict project funding · PI</dd>
-                </div>
+          <aside className="hero-aside" aria-label="Clinical and project roles">
+            <p className="aside-label">Clinical work &amp; project leadership</p>
+            <ul className="role-highlights">
+              {bellvitgeLead ? (
+                <li>
+                  <a href="#work"><strong>{bellvitgeLead.title}</strong></a>
+                  <span>Hospital Universitari de Bellvitge</span>
+                </li>
               ) : null}
-            </dl>
-            <p className="metric-note">
-              Google Scholar h-index updated {cv.scientific_profile.google_scholar_as_of ?? cv.scientific_profile.metrics_as_of}; publication count {cv.scientific_profile.publications_as_of ?? cv.scientific_profile.metrics_as_of}
-            </p>
+              {seramRole ? (
+                <li>
+                  <a href="#work"><strong>{seramRole.title}</strong></a>
+                  <span>SERAM · Spanish Society of Medical Radiology</span>
+                </li>
+              ) : null}
+              {mspredict ? (
+                <li>
+                  <a href="#research"><strong>Principal Investigator · MSPredict</strong></a>
+                  <span>{mspredict.funding_eur ? `${formatFunding(mspredict.funding_eur)} awarded · ` : ""}CaixaImpulse 2024</span>
+                </li>
+              ) : null}
+            </ul>
           </aside>
         </section>
 
@@ -155,8 +173,8 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-number">01</p>
             <div>
-              <p className="eyebrow">Current appointments</p>
-              <h2 id="work-title">Clinical practice, research and leadership</h2>
+              <p className="eyebrow">Experience</p>
+              <h2 id="work-title">Clinical practice and coordinating roles</h2>
             </div>
           </div>
 
@@ -203,8 +221,8 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-number">02</p>
             <div>
-              <p className="eyebrow">Research</p>
-              <h2 id="research-title">Selected projects</h2>
+              <p className="eyebrow">Projects</p>
+              <h2 id="research-title">Clinical implementation and funded research</h2>
             </div>
           </div>
 
@@ -224,18 +242,20 @@ export default function Home() {
                   </h3>
                 </div>
                 <div>
-                  <p className="project-role">
-                    {[project.role, project.type, project.institution]
+                  <p className="project-role">My role: {project.role}</p>
+                  {project.type || project.institution ? (
+                    <p className="project-context">{[project.type, project.institution]
                       .filter(Boolean)
-                      .join(" · ")}
-                  </p>
+                      .join(" · ")}</p>
+                  ) : null}
                   {project.principal_investigator ? (
-                    <p className="item-detail">Principal Investigator: {project.principal_investigator}</p>
+                    <p className="project-context">Principal Investigator: {project.principal_investigator}</p>
                   ) : null}
                   <p>{project.description}</p>
-                  {project.funding_eur ? (
-                    <p className="item-detail">
-                      {formatFunding(project.funding_eur)} project funding · {project.call} · {project.funder}
+                  {project.funding_eur || project.call || project.funder ? (
+                    <p className="project-funding">
+                      {project.funding_eur ? <strong>{formatFunding(project.funding_eur)} {project.role === "Principal Investigator" ? "grant awarded" : "total project funding"}</strong> : null}
+                      <span>{[project.call, project.funder].filter(Boolean).join(" · ")}</span>
                     </p>
                   ) : null}
                   {project.highlight ? (
@@ -260,6 +280,11 @@ export default function Home() {
             </div>
           </div>
 
+          <p className="publication-metrics">
+            <strong>{cv.scientific_profile.medline_indexed_publications}</strong> peer-reviewed publications
+            <span aria-hidden="true"> · </span>
+            Google Scholar h-index <strong>{cv.scientific_profile.h_index.google_scholar}</strong>
+          </p>
           <div className="publication-list">
             {selectedPublications.map((publication, index) => (
               <article className="publication-item" key={publication.id}>
@@ -307,14 +332,14 @@ export default function Home() {
         </section>
 
         <section
-          className="section shell"
+          className="section shell secondary-section"
           id="profile"
           aria-labelledby="profile-title"
         >
           <div className="section-heading">
             <p className="section-number">04</p>
             <div>
-              <p className="eyebrow">Scientific profile</p>
+              <p className="eyebrow">Teaching &amp; recognition</p>
               <h2 id="profile-title">Speaking, teaching and recognition</h2>
             </div>
           </div>
@@ -322,10 +347,19 @@ export default function Home() {
           <div className="profile-grid">
             <div>
               <div className="subsection-heading">
-                <p className="aside-label">Selected speaking</p>
-                <p>Invited lectures, panels and workshops</p>
+                <p className="aside-label">Teaching and speaking</p>
+                <p>Mentoring, courses and invited lectures</p>
               </div>
               <div className="compact-list">
+                {teachingRoles.map((role) => (
+                  <article key={role.id}>
+                    <p className="item-meta">{role.years?.join(", ")}</p>
+                    <div>
+                      <h3>{role.title}</h3>
+                      <p>{role.organization}</p>
+                    </div>
+                  </article>
+                ))}
                 {selectedTalks.map((talk) => (
                   <article key={talk.id}>
                     <p className="item-meta">
@@ -382,7 +416,7 @@ export default function Home() {
         </section>
 
         <section
-          className="section shell media-section"
+          className="section shell media-section secondary-section"
           id="media"
           aria-labelledby="media-title"
         >
@@ -394,7 +428,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="media-grid">
+          <details className="media-details">
+            <summary>View {featuredMedia.length} interviews and features</summary>
+            <div className="media-grid">
             {featuredMedia.map((item) => (
               <a
                 className="media-card"
@@ -412,11 +448,12 @@ export default function Home() {
                 </p>
               </a>
             ))}
-          </div>
+            </div>
+          </details>
         </section>
 
         <section
-          className="section shell background-section"
+          className="section shell background-section secondary-section"
           id="background"
           aria-labelledby="background-title"
         >

@@ -32,7 +32,8 @@ a {
   text-decoration: none;
 }
 
-a:focus-visible {
+a:focus-visible,
+summary:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 5px;
 }
@@ -189,6 +190,35 @@ a:focus-visible {
   border-left: 1px solid var(--line);
 }
 
+.role-highlights {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-highlights li {
+  padding-block: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.role-highlights strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.role-highlights span {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.role-highlights a:hover {
+  color: var(--accent);
+}
+
 .metrics {
   margin: 18px 0 0;
 }
@@ -222,6 +252,7 @@ a:focus-visible {
 }
 
 .section {
+  scroll-margin-top: 88px;
   padding-block: 112px;
   border-top: 1px solid var(--line);
 }
@@ -362,6 +393,36 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
+.project-item .project-context {
+  margin-bottom: 9px;
+  font-size: 0.8rem;
+}
+
+.project-item .project-funding {
+  display: grid;
+  gap: 3px;
+  margin-top: 13px;
+  font-size: 0.8rem;
+}
+
+.project-funding strong {
+  color: var(--accent-dark);
+  font-size: 0.96rem;
+}
+
+.project-item .item-detail {
+  margin-top: 12px;
+}
+
+.publication-metrics {
+  margin: -24px 0 32px;
+  color: var(--muted);
+}
+
+.publication-metrics strong {
+  color: var(--ink);
+}
+
 .publication-list {
   border-top: 1px solid var(--ink);
 }
@@ -480,6 +541,29 @@ a.publication-citation:hover {
 
 .media-section {
   padding-bottom: 128px;
+}
+
+.secondary-section {
+  padding-block: 72px;
+}
+
+.secondary-section h2 {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+}
+
+.secondary-section .section-heading {
+  margin-bottom: 40px;
+}
+
+.media-details summary {
+  width: fit-content;
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 0.92rem;
+}
+
+.media-details[open] summary {
+  margin-bottom: 26px;
 }
 
 .media-grid {
@@ -699,15 +783,18 @@ a.publication-citation:hover {
 
   .site-header {
     min-height: 64px;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-block: 12px;
     padding-inline: 16px;
   }
 
   .site-header nav {
-    max-width: calc(100vw - 78px);
-    gap: 17px;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 15px;
     font-size: 0.78rem;
-    overflow-x: auto;
-    scrollbar-width: none;
   }
 
   .site-header nav::-webkit-scrollbar {
