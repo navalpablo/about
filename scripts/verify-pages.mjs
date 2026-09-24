@@ -17,6 +17,18 @@ function verifyHtml(html) {
   for (const [, id] of html.matchAll(/href="#([^"]+)"/g)) {
     assert.ok(ids.has(id), `Broken section link: #${id}`);
   }
+  // Protect career coverage from accidental current-only or education filters.
+  for (const appointment of cv.appointments) {
+    assert.ok(html.includes(escapeHtml(appointment.organization)), `Clinical experience missing: ${appointment.organization}`);
+  }
+  for (const education of cv.education) {
+    assert.ok(html.includes(escapeHtml(education.institution)), `Training missing: ${education.institution}`);
+  }
+  for (const role of cv.leadership) {
+    assert.ok(html.includes(escapeHtml(role.title)), `Professional role missing: ${role.title}`);
+    if (role.description) assert.ok(html.includes(escapeHtml(role.description)), `Role delivery missing: ${role.title}`);
+  }
+  assert.ok(html.indexOf('id="background"') < html.indexOf('id="publications"'), "Training must precede publications");
   for (const project of cv.projects) {
     assert.ok(html.includes(escapeHtml(project.title)), `Project missing: ${project.title}`);
     if (project.funding_eur) {

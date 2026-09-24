@@ -150,18 +150,19 @@
     },
     {
       "id": "role_seram_2026_congress_leadership",
-      "title": "Leadership Roles, 38th SERAM National Congress",
-      "organization": "Spanish Society of Medical Radiology (SERAM)",
+      "title": "Head, Biotechnology & Artificial Intelligence Committee",
+      "organization": "38th SERAM National Congress · Valencia, 2026",
       "location": "Valencia, Spain",
       "start_date": "2025",
       "end_date": "2026",
       "current": false,
       "subroles": [
         "Innovation and Information Technology Lead, Scientific Committee",
-        "Head of the Biotechnology and Artificial Intelligence Committee",
         "Member, Oncologic Imaging Section"
       ],
-      "url": "https://www.seram2026.com/comite-miembros/"
+      "url": "https://www.seram2026.com/comites/",
+      "description": "Coordinated the committee's programme: 14 thematic blocks, including 11 joint sessions with other specialty areas, involving 42 speakers and 25 moderators.",
+      "evidence_url": "https://es.linkedin.com/posts/institut-de-diagn-stic-per-la-imatge-idi-_seram2026-radiologia-intellig%C3%A8nciaartificial-activity-7465052817662210048-xict"
     },
     {
       "id": "role_senr_young_committee",

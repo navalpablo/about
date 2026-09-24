@@ -78,25 +78,50 @@ export default function Home() {
   const seramRole = cv.leadership.find(
     (item) => item.id === "role_seram_ai_commission_coordinator",
   );
+  const congressRole = cv.leadership.find((item) => item.id === "role_seram_2026_congress_leadership");
+  const previousAppointments = cv.appointments.filter((item) => !item.current);
   const teachingRoles = cv.leadership.filter((item) => item.years);
   const highlightedLeadership = cv.leadership
     .filter(
       (item) =>
         item.current || item.id === "role_seram_2026_congress_leadership",
     )
-    .slice(0, 5);
-  const highlightedProjects: Project[] = cv.projects;
-  const mspredict = highlightedProjects.find((project) => project.id === "project_mspredict");
+    .sort((a, b) => Number(a.id === "role_senr_young_committee") - Number(b.id === "role_senr_young_committee"));
+  const projectOrder = ["project_imaginem", "project_ia_ictus", "project_mspredict", "project_brain_tumor_perfunomics", "project_amn_dimethyl_fumarate"];
+  const highlightedProjects: Project[] = [...cv.projects].sort((a, b) => projectOrder.indexOf(a.id) - projectOrder.indexOf(b.id));
   const selectedPublications = cv.publications.filter((item) => item.selected);
   const selectedTalks = cv.talks;
   const recentAwards = cv.awards.slice(0, 6);
   const featuredMedia = cv.media.slice(0, 9);
-  const selectedEducation = cv.education.filter((item) =>
-    [
-      "edu_phd_ub",
-      "edu_radiology_residency_bellvitge",
-      "edu_medical_degree_uab",
-    ].includes(item.id),
+  const selectedEducation = cv.education;
+
+  const renderPublication = (publication: (typeof cv.publications)[number], index: number) => (
+              <article className="publication-item" key={publication.id}>
+                <p className="publication-number">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <div>
+                  <p className="item-meta">{publication.year}</p>
+                  {publication.url ? (
+                    <a
+                      className="publication-citation"
+                      href={publication.url}
+                      {...externalLink}
+                    >
+                      {publication.citation} <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : (
+                    <p className="publication-citation">
+                      {publication.citation}
+                    </p>
+                  )}
+                  {publication.author_note ? (
+                    <p className="publication-note">
+                      {publication.author_note}
+                    </p>
+                  ) : null}
+                </div>
+              </article>
   );
 
   return (
@@ -106,10 +131,10 @@ export default function Home() {
           PNB
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#work">Experience</a>
+          <a href="#work">Experience &amp; leadership</a>
           <a href="#research">Projects</a>
+          <a href="#background">Training</a>
           <a href="#publications">Publications</a>
-          <a href="#profile">Teaching &amp; recognition</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -159,10 +184,10 @@ export default function Home() {
                   <span>SERAM · Spanish Society of Medical Radiology</span>
                 </li>
               ) : null}
-              {mspredict ? (
+              {congressRole ? (
                 <li>
-                  <a href="#research"><strong>Principal Investigator · MSPredict</strong></a>
-                  <span>{mspredict.funding_eur ? `${formatFunding(mspredict.funding_eur)} awarded · ` : ""}CaixaImpulse 2024</span>
+                  <a href="#leadership"><strong>{congressRole.title}</strong></a>
+                  <span>SERAM 2026 · 14 thematic blocks, 11 joint sessions</span>
                 </li>
               ) : null}
             </ul>
@@ -173,43 +198,49 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-number">01</p>
             <div>
-              <p className="eyebrow">Experience</p>
+              <p className="eyebrow">Experience &amp; leadership</p>
               <h2 id="work-title">Clinical practice and coordinating roles</h2>
             </div>
           </div>
 
-          <div className="work-grid">
-            <div className="ruled-list">
-              {currentAppointments.map((appointment) => (
-                <article className="work-item" key={appointment.id}>
-                  <p className="item-meta">
-                    {formatRange(appointment.start_date, appointment.end_date)}
-                  </p>
-                  <div>
-                    <h3>{appointment.title}</h3>
-                    <p className="organization">{appointment.organization}</p>
-                    {appointment.details?.[0] ? (
-                      <p className="item-detail">{appointment.details[0]}</p>
-                    ) : null}
-                  </div>
-                </article>
-              ))}
-            </div>
+          <div className="leadership-grid" id="leadership" aria-label="Professional leadership and mentoring">
+            {highlightedLeadership.map((role) => (
+              <article className="leadership-entry" key={role.id}>
+                <p className="item-meta">{formatRange(role.start_date, role.current ? null : role.end_date)}</p>
+                <h3>{role.title}</h3>
+                <p className="organization">{role.organization}</p>
+                {role.description ? <p className="item-detail">{role.description}</p> : null}
+                {role.subroles ? <p className="item-detail">{role.subroles.join(" · ")}</p> : null}
+                {role.evidence_url ? <a className="text-link" href={role.evidence_url} {...externalLink}>Programme and team delivery ↗</a> : null}
+              </article>
+            ))}
+          </div>
 
-            <aside className="leadership-panel">
-              <p className="aside-label">Institutional roles</p>
-              <ul>
-                {highlightedLeadership.map((role) => (
-                  <li key={role.id}>
-                    <strong>{role.title}</strong>
-                    <span>{role.organization}</span>
-                    {role.subroles ? (
-                      <span>{role.subroles.join(" · ")}</span>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            </aside>
+          <h3 className="aside-label career-heading">Current clinical and research appointments</h3>
+          <div className="appointments-grid">
+            {currentAppointments.map((appointment) => (
+              <article className="work-item" key={appointment.id}>
+                <p className="item-meta">{formatRange(appointment.start_date, appointment.end_date)}</p>
+                <div>
+                  <h3>{appointment.title}</h3>
+                  <p className="organization">{appointment.organization}</p>
+                  {appointment.details?.[0] ? <p className="item-detail">{appointment.details[0]}</p> : null}
+                </div>
+              </article>
+            ))}
+          </div>
+          <h3 className="aside-label career-heading">Previous clinical experience</h3>
+          <div className="ruled-list">
+            {previousAppointments.map((appointment) => (
+              <article className="work-item" key={appointment.id}>
+                <p className="item-meta">{formatRange(appointment.start_date, appointment.end_date)}</p>
+                <div>
+                  <h3>{appointment.title}</h3>
+                  <p className="organization">{appointment.organization}</p>
+                  {appointment.details?.[0] ? <p className="item-detail">{appointment.details[0]}</p> : null}
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -268,12 +299,70 @@ export default function Home() {
         </section>
 
         <section
+          className="section shell background-section secondary-section"
+          id="background"
+          aria-labelledby="background-title"
+        >
+          <div className="section-heading">
+            <p className="section-number">03</p>
+            <div>
+              <p className="eyebrow">Training</p>
+              <h2 id="background-title">Training and international experience</h2>
+            </div>
+          </div>
+
+          <div className="background-grid">
+            <div className="education-list">
+              {selectedEducation.map((item) => (
+                <article key={item.id}>
+                  <p className="item-meta">
+                    {item.start_date?.slice(0, 4) === item.end_date?.slice(0, 4) ? formatYear(item.start_date) : formatRange(item.start_date, item.end_date)}
+                  </p>
+                  <div>
+                    <h3>{item.qualification}</h3>
+                    <p>{item.institution}</p>
+                    {item.location ? <p className="compact-detail">{item.location}</p> : null}
+                    {item.focus ? <p className="compact-detail">{item.focus}</p> : null}
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <aside className="profile-panel">
+              <div>
+                <p className="aside-label">Languages</p>
+                <ul className="tag-list">
+                  {cv.languages.map((item) => (
+                    <li key={item.language}>
+                      <strong>{item.language}</strong>
+                      <span>{item.level}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="identifier-list">
+                <p className="aside-label">Research profiles</p>
+                <a href={cv.contacts.orcid_url} {...externalLink}>
+                  ORCID {cv.contacts.orcid} <span aria-hidden="true">↗</span>
+                </a>
+                <a href={cv.contacts.google_scholar} {...externalLink}>
+                  Google Scholar <span aria-hidden="true">↗</span>
+                </a>
+                <a href={cv.contacts.researchgate} {...externalLink}>
+                  ResearchGate <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section
           className="section shell"
           id="publications"
           aria-labelledby="publications-title"
         >
           <div className="section-heading">
-            <p className="section-number">03</p>
+            <p className="section-number">04</p>
             <div>
               <p className="eyebrow">Publications</p>
               <h2 id="publications-title">Selected peer-reviewed articles</h2>
@@ -286,35 +375,15 @@ export default function Home() {
             Google Scholar h-index <strong>{cv.scientific_profile.h_index.google_scholar}</strong>
           </p>
           <div className="publication-list">
-            {selectedPublications.map((publication, index) => (
-              <article className="publication-item" key={publication.id}>
-                <p className="publication-number">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <div>
-                  <p className="item-meta">{publication.year}</p>
-                  {publication.url ? (
-                    <a
-                      className="publication-citation"
-                      href={publication.url}
-                      {...externalLink}
-                    >
-                      {publication.citation} <span aria-hidden="true">↗</span>
-                    </a>
-                  ) : (
-                    <p className="publication-citation">
-                      {publication.citation}
-                    </p>
-                  )}
-                  {publication.author_note ? (
-                    <p className="publication-note">
-                      {publication.author_note}
-                    </p>
-                  ) : null}
-                </div>
-              </article>
-            ))}
+            {selectedPublications.slice(0, 4).map(renderPublication)}
           </div>
+
+          <details className="more-records">
+            <summary>More selected publications ({selectedPublications.length - 4})</summary>
+            <div className="publication-list">
+              {selectedPublications.slice(4).map((publication, index) => renderPublication(publication, index + 4))}
+            </div>
+          </details>
 
           <div className="section-actions">
             <a
@@ -337,7 +406,7 @@ export default function Home() {
           aria-labelledby="profile-title"
         >
           <div className="section-heading">
-            <p className="section-number">04</p>
+            <p className="section-number">05</p>
             <div>
               <p className="eyebrow">Teaching &amp; recognition</p>
               <h2 id="profile-title">Speaking, teaching and recognition</h2>
@@ -360,6 +429,8 @@ export default function Home() {
                     </div>
                   </article>
                 ))}
+                <details className="more-records">
+                  <summary>Invited talks and workshops ({selectedTalks.length})</summary>
                 {selectedTalks.map((talk) => (
                   <article key={talk.id}>
                     <p className="item-meta">
@@ -381,6 +452,7 @@ export default function Home() {
                     </div>
                   </article>
                 ))}
+                </details>
               </div>
             </div>
 
@@ -421,7 +493,7 @@ export default function Home() {
           aria-labelledby="media-title"
         >
           <div className="section-heading">
-            <p className="section-number">05</p>
+            <p className="section-number">06</p>
             <div>
               <p className="eyebrow">Media</p>
               <h2 id="media-title">Clinical AI and imaging in the public conversation</h2>
@@ -452,62 +524,7 @@ export default function Home() {
           </details>
         </section>
 
-        <section
-          className="section shell background-section secondary-section"
-          id="background"
-          aria-labelledby="background-title"
-        >
-          <div className="section-heading">
-            <p className="section-number">06</p>
-            <div>
-              <p className="eyebrow">Background</p>
-              <h2 id="background-title">Training and professional profile</h2>
-            </div>
-          </div>
 
-          <div className="background-grid">
-            <div className="education-list">
-              {selectedEducation.map((item) => (
-                <article key={item.id}>
-                  <p className="item-meta">
-                    {formatRange(item.start_date, item.end_date)}
-                  </p>
-                  <div>
-                    <h3>{item.qualification}</h3>
-                    <p>{item.institution}</p>
-                    {item.focus ? <p className="compact-detail">{item.focus}</p> : null}
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <aside className="profile-panel">
-              <div>
-                <p className="aside-label">Languages</p>
-                <ul className="tag-list">
-                  {cv.languages.map((item) => (
-                    <li key={item.language}>
-                      <strong>{item.language}</strong>
-                      <span>{item.level}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="identifier-list">
-                <p className="aside-label">Research profiles</p>
-                <a href={cv.contacts.orcid_url} {...externalLink}>
-                  ORCID {cv.contacts.orcid} <span aria-hidden="true">↗</span>
-                </a>
-                <a href={cv.contacts.google_scholar} {...externalLink}>
-                  Google Scholar <span aria-hidden="true">↗</span>
-                </a>
-                <a href={cv.contacts.researchgate} {...externalLink}>
-                  ResearchGate <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </aside>
-          </div>
-        </section>
       </main>
 
       <footer className="footer" id="contact">

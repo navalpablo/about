@@ -907,3 +907,28 @@ a.publication-citation:hover {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Career evidence stays visible; longer academic lists expand on demand. */
+#leadership { scroll-margin-top: 100px; }
+.leadership-grid, .appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 42px;
+}
+.leadership-grid { background: var(--soft); padding: 10px 28px; }
+.leadership-entry { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.leadership-entry h3 { margin: 9px 0 0; font-size: 1.18rem; line-height: 1.4; }
+.leadership-entry .organization { font-size: 0.87rem; }
+.leadership-entry .text-link { display: inline-block; margin-top: 14px; }
+.career-heading { margin: 38px 0 18px; }
+.appointments-grid .work-item { grid-template-columns: 92px minmax(0, 1fr); gap: 18px; }
+.more-records { margin-top: 24px; }
+.more-records summary { cursor: pointer; color: var(--accent); font-size: 0.9rem; width: fit-content; }
+.more-records[open] summary { margin-bottom: 20px; }
+@media (max-width: 900px) {
+  .leadership-grid, .appointments-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .leadership-grid { padding-inline: 20px; }
+  .appointments-grid .work-item { grid-template-columns: 1fr; }
+}

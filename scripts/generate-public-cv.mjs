@@ -83,6 +83,8 @@ const publicCv = {
       current: item.current,
       years: item.years,
       subroles: item.subroles,
+      description: item.description,
+      evidence_url: item.evidence_url,
       url: item.url,
     }),
   ),
