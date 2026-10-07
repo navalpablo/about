@@ -92,7 +92,7 @@ export default function Home() {
   const selectedPublications = cv.publications.filter((item) => item.selected);
   const selectedTalks = cv.talks;
   const recentAwards = cv.awards.slice(0, 6);
-  const featuredMedia = cv.media.slice(0, 9);
+  const featuredMedia = cv.media;
   const selectedEducation = cv.education;
 
   const renderPublication = (publication: (typeof cv.publications)[number], index: number) => (
