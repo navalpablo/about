@@ -36,6 +36,13 @@ function verifyHtml(html) {
       assert.ok(html.includes(funding), `Project funding missing: ${project.title}`);
     }
   }
+  for (const activity of [...cv.talks, ...(cv.courses ?? [])]) {
+    assert.ok(html.includes(escapeHtml(activity.title)), `Activity missing: ${activity.title}`);
+    for (const evidence of activity.evidence ?? []) {
+      const href = evidence.url.startsWith("/") ? `/about${evidence.url}` : evidence.url;
+      assert.ok(html.includes(`href="${escapeHtml(href)}"`), `Supporting material link missing: ${activity.title}`);
+    }
+  }
   const stylesheets = [...html.matchAll(/<link\b[^>]*rel="stylesheet"[^>]*>/g)]
     .map(([tag]) => tag.match(/href="([^"]+)"/)?.[1]).filter(Boolean);
   assert.ok(stylesheets.length, "Compiled CSS is missing");
@@ -52,6 +59,11 @@ if (!siteUrl) {
   }
   await access("out/.nojekyll");
   await access("out/cv/Pablo_Naval_Baudin_CV_English_July_2026.pdf");
+  for (const activity of [...cv.talks, ...(cv.courses ?? [])]) {
+    for (const evidence of activity.evidence ?? []) {
+      if (evidence.url.startsWith("/evidence/")) await access(`out${evidence.url}`);
+    }
+  }
   console.log("Static CV, navigation, CSS, public data and downloadable PDF verified.");
 } else {
   let lastError;

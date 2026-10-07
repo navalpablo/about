@@ -925,6 +925,31 @@ a.publication-citation:hover {
 .more-records { margin-top: 24px; }
 .more-records summary { cursor: pointer; color: var(--accent); font-size: 0.9rem; width: fit-content; }
 .more-records[open] summary { margin-bottom: 20px; }
+
+.evidence-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.evidence-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.evidence-links a:hover {
+  border-color: var(--accent);
+  background: var(--soft);
+}
 @media (max-width: 900px) {
   .leadership-grid, .appointments-grid { grid-template-columns: 1fr; }
 }

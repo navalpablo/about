@@ -61,6 +61,37 @@ const externalLink = {
   rel: "noreferrer",
 } as const;
 
+type SupportingMaterial = {
+  label: string;
+  url: string;
+  kind: string;
+};
+
+function SupportingEvidence({
+  items,
+  activity,
+}: {
+  items?: SupportingMaterial[];
+  activity: string;
+}) {
+  if (!items?.length) return null;
+
+  return (
+    <div className="evidence-links">
+      {items.map((item) => (
+        <a
+          key={item.url}
+          href={item.url.startsWith("/") ? `${siteBasePath}${item.url}` : item.url}
+          aria-label={`${item.label}: ${activity}`}
+          {...externalLink}
+        >
+          {item.label} <span aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export default function Home() {
   const appointmentOrder = ["appt_idi_bellvitge_consultant", "appt_bellvitge_radiomics_lead"];
   const currentAppointments = cv.appointments
@@ -429,8 +460,8 @@ export default function Home() {
                     </div>
                   </article>
                 ))}
-                <details className="more-records">
-                  <summary>Invited talks and workshops ({selectedTalks.length})</summary>
+                <details className="more-records" id="talks">
+                  <summary>Talks and workshops ({selectedTalks.length})</summary>
                 {selectedTalks.map((talk) => (
                   <article key={talk.id}>
                     <p className="item-meta">
@@ -449,9 +480,26 @@ export default function Home() {
                       <p>
                         {talk.role} · {talk.event}
                       </p>
+                      <p className="compact-detail">{talk.organization} · {talk.location}</p>
+                      <SupportingEvidence items={talk.evidence} activity={talk.title} />
                     </div>
                   </article>
                 ))}
+                </details>
+                <details className="more-records" id="courses">
+                  <summary>Professional courses attended ({cv.courses.length})</summary>
+                  {cv.courses.map((course) => (
+                    <article key={course.id}>
+                      <p className="item-meta">{formatDate(course.date)}</p>
+                      <div>
+                        <h3>{course.title}</h3>
+                        <p>{course.organization}</p>
+                        <p className="compact-detail">{course.location}</p>
+                        {course.notes ? <p className="compact-detail">{course.notes}</p> : null}
+                        <SupportingEvidence items={course.evidence} activity={course.title} />
+                      </div>
+                    </article>
+                  ))}
                 </details>
               </div>
             </div>

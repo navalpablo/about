@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_name": "pablo_naval_baudin_public_cv",
-    "schema_version": "1.0.3",
+    "schema_version": "1.0.4",
     "last_updated": "2026-10-07",
     "generated_from": "pablo_naval_baudin_cv_master"
   },
@@ -333,15 +333,21 @@
   ],
   "talks": [
     {
-      "id": "talk_seram_advanced_diffusion_2026",
-      "title": "Advanced Diffusion: What Are We Missing?",
-      "role": "Invited lecturer",
-      "event": "38th SERAM National Congress",
-      "organization": "SERAM",
-      "location": "Valencia, Spain",
-      "date": "2026-05-21",
-      "notes": "Also moderator of seven scientific sessions.",
-      "url": "https://www.seram2026.com/programa/"
+      "id": "talk_esmrmb_ms_mri_2026",
+      "title": "MRI Acquisition in MS: a Clinical Perspective",
+      "role": "Faculty speaker",
+      "event": "ESMRMB 2026 — Pre-congress Workshop 4: Multiple Sclerosis and Related Neuroimmunological Disorders",
+      "organization": "European Society for Magnetic Resonance in Medicine and Biology",
+      "location": "Girona, Spain",
+      "date": "2026-09-30",
+      "notes": "Translating Clinical Needs into Robust MR Solutions.",
+      "evidence": [
+        {
+          "label": "Speaker certificate",
+          "url": "/evidence/talk-esmrmb-ms-mri-2026.pdf",
+          "kind": "certificate"
+        }
+      ]
     },
     {
       "id": "talk_esnr_fmri_workshop_2026",
@@ -353,6 +359,17 @@
       "date_start": "2026-06-11",
       "date_end": "2026-06-13",
       "url": "https://www.esnr.org/event-details/7012"
+    },
+    {
+      "id": "talk_seram_advanced_diffusion_2026",
+      "title": "Advanced Diffusion: What Are We Missing?",
+      "role": "Invited lecturer",
+      "event": "38th SERAM National Congress",
+      "organization": "SERAM",
+      "location": "Valencia, Spain",
+      "date": "2026-05-21",
+      "notes": "Also moderator of seven scientific sessions.",
+      "url": "https://www.seram2026.com/programa/"
     },
     {
       "id": "talk_radiolegs_innovation_panel_2026",
@@ -392,7 +409,52 @@
       "organization": "Universitat de Barcelona",
       "location": "Barcelona, Spain",
       "date": "2024-05-09",
-      "url": "https://www.ub.edu/catedres/es/actualidad/introduccion-la-inteligencia-artificial-en-radiologia"
+      "url": "https://www.ub.edu/catedres/es/actualidad/introduccion-la-inteligencia-artificial-en-radiologia",
+      "evidence": [
+        {
+          "label": "Teaching certificate",
+          "url": "/evidence/talk-ub-ai-programming-2024.pdf",
+          "kind": "certificate"
+        },
+        {
+          "label": "Lecture screenshot",
+          "url": "/evidence/talk-ub-ai-programming-2024-image.jpg",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "talk_ms_biomarkers_doctoral_2023",
+      "title": "Imaging Biomarkers for the Diagnosis and Follow-up of Multiple Sclerosis and Related Diseases",
+      "role": "Speaker",
+      "event": "Doctoral programme",
+      "organization": "Universitat de Barcelona",
+      "location": "Barcelona, Spain",
+      "date": "2023-03-31",
+      "evidence": [
+        {
+          "label": "Lecture screenshot",
+          "url": "/evidence/talk-ms-biomarkers-doctoral-2023-image.jpg",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "talk_dti_tractography_lab_2022",
+      "title": "DTI Tractography Lab",
+      "role": "Workshop faculty",
+      "event": "5th International Brain Mapping Course",
+      "organization": "Hospital Universitari de Bellvitge",
+      "location": "Barcelona, Spain",
+      "date": "2022-11-22",
+      "evidence": [
+        {
+          "label": "Lecture screenshot",
+          "url": "/evidence/talk-dti-tractography-lab-2022-image.jpg",
+          "kind": "image"
+        }
+      ],
+      "url": "https://www.mappingbellvitge.com/"
     },
     {
       "id": "talk_esnr_fmri_workshop_2022",
@@ -402,7 +464,52 @@
       "organization": "European Society of Neuroradiology",
       "location": "Madrid, Spain",
       "date": "2022-11-18",
-      "url": "https://www.esnr.org/en/3rd-advanced-course-in-diagnostic-neuroradiology-glioma-imaging/scientific-program/"
+      "url": "https://www.esnr.org/en/3rd-advanced-course-in-diagnostic-neuroradiology-glioma-imaging/scientific-program/",
+      "evidence": [
+        {
+          "label": "Lecture screenshot",
+          "url": "/evidence/talk-esnr-fmri-2022-image.jpg",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "talk_optic_neuropathy_2022",
+      "title": "MRI in Optic Neuropathy",
+      "role": "Speaker",
+      "event": "Claves Clínicas en Neurología: Neuropatías Ópticas",
+      "organization": "EMXarxa / Hospital Universitari de Bellvitge",
+      "location": "Barcelona, Spain",
+      "date": "2022-11-03",
+      "evidence": [
+        {
+          "label": "Lecture screenshot",
+          "url": "/evidence/talk-optic-neuropathy-2022-image.jpg",
+          "kind": "image"
+        }
+      ],
+      "url": "https://idibell.cat/es/?agenda=claves-clinicas-en-neurologia-neuropatias-opticas"
+    },
+    {
+      "id": "talk_who_circumscribed_gliomas_2022",
+      "title": "WHO CNS 2021: Circumscribed Gliomas",
+      "role": "Speaker",
+      "event": "Refresher Course: 2021 WHO CNS Tumour Classification",
+      "organization": "Plataforma por la Imagen",
+      "location": "Online",
+      "date": "2022-10-24",
+      "evidence": [
+        {
+          "label": "Lecture screenshot",
+          "url": "/evidence/talk-who-circumscribed-gliomas-2022-image.png",
+          "kind": "image"
+        },
+        {
+          "label": "Watch the lecture",
+          "url": "https://www.youtube.com/watch?v=puWN1h_fnwI",
+          "kind": "recording"
+        }
+      ]
     },
     {
       "id": "talk_ecr_ai_training_panel_2022",
@@ -413,6 +520,38 @@
       "location": "Vienna, Austria",
       "date": "2022-07-14",
       "url": "https://connect.myesr.org/course/how-to-train-radiologists-and-related-professionals-in-ai/"
+    },
+    {
+      "id": "talk_radiomics_preprocessing_2022",
+      "title": "Image Preprocessing for Radiomics Analysis",
+      "role": "Speaker",
+      "event": "Radiology Department Teaching Session",
+      "organization": "Hospital Universitari de Bellvitge",
+      "location": "Barcelona, Spain",
+      "date": "2022-05-20",
+      "evidence": [
+        {
+          "label": "Lecture screenshot",
+          "url": "/evidence/talk-radiomics-preprocessing-2022-image.jpg",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "talk_ms_biomarkers_2021",
+      "title": "Imaging Biomarkers in Multiple Sclerosis",
+      "role": "Speaker",
+      "event": "Radiology Department Teaching Session",
+      "organization": "Hospital Universitari de Bellvitge",
+      "location": "Barcelona, Spain",
+      "date": "2021-11-26",
+      "evidence": [
+        {
+          "label": "Lecture screenshot",
+          "url": "/evidence/talk-ms-biomarkers-2021-image.jpg",
+          "kind": "image"
+        }
+      ]
     }
   ],
   "awards": [
@@ -887,6 +1026,142 @@
     {
       "language": "French",
       "level": "C1"
+    }
+  ],
+  "courses": [
+    {
+      "id": "course_pytorch_medical_imaging_2023",
+      "title": "Deep Learning with PyTorch for Medical Image Analysis",
+      "organization": "Udemy",
+      "location": "Online",
+      "date": "2023-09-10",
+      "evidence": [
+        {
+          "label": "Completion certificate",
+          "url": "/evidence/course-pytorch-medical-imaging-2023.pdf",
+          "kind": "certificate"
+        }
+      ]
+    },
+    {
+      "id": "course_ai4imaging_2023",
+      "title": "Artificial Intelligence for Imaging",
+      "organization": "Maastricht University",
+      "location": "Maastricht, The Netherlands",
+      "date": "2023-06-28",
+      "date_end": "2023-07-01",
+      "evidence": [
+        {
+          "label": "Attendance certificate",
+          "url": "/evidence/course-ai4imaging-2023.pdf",
+          "kind": "certificate"
+        }
+      ]
+    },
+    {
+      "id": "course_fsl_2022",
+      "title": "FSL Course",
+      "organization": "University of Oxford",
+      "location": "Oxford, UK",
+      "date": "2022-09-19",
+      "date_end": "2022-09-23",
+      "evidence": [
+        {
+          "label": "Attendance certificate",
+          "url": "/evidence/course-fsl-2022.pdf",
+          "kind": "certificate"
+        }
+      ]
+    },
+    {
+      "id": "course_esnr_epilepsy_2022",
+      "title": "Advanced Course in Diagnostic Neuroradiology on Imaging in Epilepsy",
+      "organization": "European Society of Neuroradiology",
+      "location": "Barcelona, Spain",
+      "date": "2022-06-15",
+      "date_end": "2022-06-18",
+      "evidence": [
+        {
+          "label": "Attendance certificate",
+          "url": "/evidence/course-esnr-epilepsy-2022.pdf",
+          "kind": "certificate"
+        }
+      ]
+    },
+    {
+      "id": "course_ecnr_anatomy_2021",
+      "title": "ECNR Module 1: Anatomy and Embryology",
+      "organization": "European Society of Neuroradiology / European Board of Neuroradiology",
+      "location": "Online",
+      "date": "2021-02-13",
+      "notes": "Module examination passed.",
+      "evidence": [
+        {
+          "label": "Examination certificate",
+          "url": "/evidence/course-ecnr-anatomy-2021.pdf",
+          "kind": "certificate"
+        }
+      ]
+    },
+    {
+      "id": "course_ecnr_degenerative_2020",
+      "title": "ECNR Module 4: Degenerative, Metabolic and Inflammatory Diseases",
+      "organization": "European Society of Neuroradiology / European Board of Neuroradiology",
+      "location": "Online",
+      "date": "2020-11-14",
+      "notes": "Module examination passed.",
+      "evidence": [
+        {
+          "label": "Examination certificate",
+          "url": "/evidence/course-ecnr-degenerative-2020.pdf",
+          "kind": "certificate"
+        }
+      ]
+    },
+    {
+      "id": "course_ecnr_stroke_trauma_2019",
+      "title": "ECNR Module 3: Stroke and Trauma",
+      "organization": "European Society of Neuroradiology / European Board of Neuroradiology",
+      "location": "Rovinj, Croatia",
+      "date": "2019-10-17",
+      "notes": "Module examination passed.",
+      "evidence": [
+        {
+          "label": "Examination certificate",
+          "url": "/evidence/course-ecnr-stroke-trauma-2019.pdf",
+          "kind": "certificate"
+        }
+      ]
+    },
+    {
+      "id": "course_ecnr_cns_tumors_2019",
+      "title": "ECNR Module 2: CNS Tumours",
+      "organization": "European Society of Neuroradiology / European Board of Neuroradiology",
+      "location": "Antwerp, Belgium",
+      "date": "2019-05-03",
+      "notes": "Module examination passed.",
+      "evidence": [
+        {
+          "label": "Examination certificate",
+          "url": "/evidence/course-ecnr-cns-tumors-2019.pdf",
+          "kind": "certificate"
+        }
+      ]
+    },
+    {
+      "id": "course_airp_2018",
+      "title": "AIRP Radiologic Pathology Correlation Course",
+      "organization": "American Institute for Radiologic Pathology",
+      "location": "Silver Spring, Maryland, USA",
+      "date": "2018-02-12",
+      "date_end": "2018-03-09",
+      "evidence": [
+        {
+          "label": "Completion certificate",
+          "url": "/evidence/course-airp-2018.pdf",
+          "kind": "certificate"
+        }
+      ]
     }
   ]
 }
