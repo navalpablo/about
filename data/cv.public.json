@@ -2,7 +2,7 @@
   "metadata": {
     "schema_name": "pablo_naval_baudin_public_cv",
     "schema_version": "1.0.4",
-    "last_updated": "2026-10-07",
+    "last_updated": "2026-10-25",
     "generated_from": "pablo_naval_baudin_cv_master"
   },
   "person": {
@@ -271,6 +271,19 @@
     }
   ],
   "projects": [
+    {
+      "id": "project_rimlong",
+      "title": "RimLong: Longitudinal Dynamics of T1-dark-rim Lesions in Multiple Sclerosis",
+      "role": "Principal Investigator",
+      "funder": "Spanish Society of Neuroradiology (SENR)",
+      "call": "SENR Research Grant 2026",
+      "funding_eur": 5000,
+      "start_date": "2026",
+      "current": true,
+      "date_label": "Awarded 2026",
+      "description": "Longitudinal within-patient study of T1-dark-rim lesion dynamics in multiple sclerosis using 3D T1 TFE MRI, investigating their relationship with treatment and clinical evolution.",
+      "notes": "Officially announced at the SENR members’ annual meeting in Málaga on 23 October 2026."
+    },
     {
       "id": "project_mspredict",
       "title": "MSPredict: MS Prognosis through Advanced Imaging Analysis",
@@ -555,6 +568,17 @@
     }
   ],
   "awards": [
+    {
+      "id": "award_senr_rimlong_2026",
+      "year": 2026,
+      "award": "SENR Research Grant",
+      "organization": "Spanish Society of Neuroradiology",
+      "awarded_work": "RimLong: Longitudinal Dynamics of T1-dark-rim Lesions in Multiple Sclerosis",
+      "role": "Principal Investigator",
+      "funding_eur": 5000,
+      "announcement_date": "2026-10-23",
+      "announcement_location": "SENR members’ annual meeting, Málaga, Spain"
+    },
     {
       "id": "award_iese_novartis_imaginem_2026",
       "year": 2026,
