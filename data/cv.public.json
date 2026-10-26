@@ -2,7 +2,7 @@
   "metadata": {
     "schema_name": "pablo_naval_baudin_public_cv",
     "schema_version": "1.0.4",
-    "last_updated": "2026-10-25",
+    "last_updated": "2026-10-26",
     "generated_from": "pablo_naval_baudin_cv_master"
   },
   "person": {
@@ -345,6 +345,39 @@
     }
   ],
   "talks": [
+    {
+      "id": "talk_mri_bogota_ms_pathway_2026",
+      "title": "AI-driven redesign of the MRI pathway in multiple sclerosis",
+      "role": "Invited lecturer",
+      "event": "Simposio Internacional MRI 2026",
+      "organization": "Clínica del Country and Clínica La Colina",
+      "location": "Bogotá, Colombia (online participation)",
+      "date": "2026-11-05",
+      "status": "upcoming",
+      "url": "https://www.clinicadelcountry.com/sites/default/files/2026-10/Programa-Academico-SIMPOSIO-MRI.pdf"
+    },
+    {
+      "id": "talk_iabiomed_clinical_translation_2026",
+      "title": "Cerrando la brecha: Traslación clínica de la IA y procesado de imagen médica",
+      "role": "Invited lecturer",
+      "event": "II Jornada Anual de la Sociedad Española de Inteligencia Artificial en Biomedicina (IABiomed)",
+      "organization": "Sociedad Española de Inteligencia Artificial en Biomedicina (IABiomed)",
+      "location": "Barcelona, Spain",
+      "date": "2026-10-30",
+      "status": "upcoming",
+      "notes": "Scheduled invited lecture at Casa de Convalescència, Hospital de la Santa Creu i Sant Pau.",
+      "url": "https://2026.iabiomed.org/"
+    },
+    {
+      "id": "talk_senr_ai_tips_tricks_2026",
+      "title": "Tips and tricks de softwares en IA en neurorradiología",
+      "role": "Invited lecturer",
+      "event": "LIV Reunión Anual de la Sociedad Española de Neurorradiología (SENR)",
+      "organization": "Spanish Society of Neuroradiology (SENR)",
+      "location": "Málaga, Spain",
+      "date": "2026-10-22",
+      "url": "https://ftp.tramasolutions.com/Programa_SENR26.pdf"
+    },
     {
       "id": "talk_esmrmb_ms_mri_2026",
       "title": "MRI Acquisition in MS: a Clinical Perspective",

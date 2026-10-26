@@ -466,6 +466,7 @@ export default function Home() {
                   <article key={talk.id}>
                     <p className="item-meta">
                       {formatDate(talk.date ?? talk.date_start)}
+                      {talk.status === "upcoming" ? " · Upcoming" : null}
                     </p>
                     <div>
                       {talk.url ? (

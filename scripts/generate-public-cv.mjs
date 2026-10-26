@@ -138,8 +138,10 @@ const publicCv = {
         date: item.date,
         date_start: item.date_start,
         date_end: item.date_end,
+        status: item.status,
         notes: item.notes,
         url: item.url,
+        evidence: item.evidence,
       }),
     ),
   awards: master.awards_and_recognition.map((item) =>
