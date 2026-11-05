@@ -185,7 +185,7 @@ export default function Home() {
               </a>
               <a
                 className="text-link"
-                href={`${siteBasePath}/cv/Pablo_Naval_Baudin_CV_English_July_2026.pdf`}
+                href={`${siteBasePath}/cv/Pablo_Naval_Baudin_CV_English_November_2026.pdf`}
                 {...externalLink}
               >
                 Download CV <span aria-hidden="true">↓</span>

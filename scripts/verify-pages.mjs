@@ -58,7 +58,7 @@ if (!siteUrl) {
     await access(`out${href.slice("/about".length)}`);
   }
   await access("out/.nojekyll");
-  await access("out/cv/Pablo_Naval_Baudin_CV_English_July_2026.pdf");
+  await access("out/cv/Pablo_Naval_Baudin_CV_English_November_2026.pdf");
   for (const activity of [...cv.talks, ...(cv.courses ?? [])]) {
     for (const evidence of activity.evidence ?? []) {
       if (evidence.url.startsWith("/evidence/")) await access(`out${evidence.url}`);

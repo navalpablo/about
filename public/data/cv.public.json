@@ -2,7 +2,7 @@
   "metadata": {
     "schema_name": "pablo_naval_baudin_public_cv",
     "schema_version": "1.0.4",
-    "last_updated": "2026-10-26",
+    "last_updated": "2026-11-05",
     "generated_from": "pablo_naval_baudin_cv_master"
   },
   "person": {
@@ -304,12 +304,11 @@
       "type": "Clinical AI implementation and workflow transformation",
       "start_date": "2024",
       "current": true,
-      "description": "Implementation and evaluation of AI-assisted longitudinal MRI review in the Bellvitge multiple-sclerosis pathway.",
+      "description": "Redesigned the end-to-end care pathway for patients with multiple sclerosis around AI-supported imaging assessment, reducing waiting lists and costs.",
       "outcomes": [
-        "Winner of the 2026 IESE–Novartis Award, Category II (Presente digital).",
-        "Pilot evaluation included 89 paired MRI examinations and demonstrated a substantial increase in identified activity after neuroradiologist review with AI support."
+        "Winner of the 2026 IESE–Novartis Award, Category II (Presente digital)."
       ],
-      "highlight": "Pilot: 89 paired MRI examinations · IESE–Novartis award, 2026."
+      "highlight": "IESE–Novartis Award for Operational Excellence in Healthcare Management, 2026."
     },
     {
       "id": "project_ia_ictus",
@@ -353,7 +352,6 @@
       "organization": "Clínica del Country and Clínica La Colina",
       "location": "Bogotá, Colombia (online participation)",
       "date": "2026-11-05",
-      "status": "upcoming",
       "url": "https://www.clinicadelcountry.com/sites/default/files/2026-10/Programa-Academico-SIMPOSIO-MRI.pdf"
     },
     {
@@ -364,8 +362,7 @@
       "organization": "Sociedad Española de Inteligencia Artificial en Biomedicina (IABiomed)",
       "location": "Barcelona, Spain",
       "date": "2026-10-30",
-      "status": "upcoming",
-      "notes": "Scheduled invited lecture at Casa de Convalescència, Hospital de la Santa Creu i Sant Pau.",
+      "notes": "Delivered at Casa de Convalescència, Hospital de la Santa Creu i Sant Pau.",
       "url": "https://2026.iabiomed.org/"
     },
     {

@@ -21,7 +21,7 @@ cp data/cv.public.json public/data/cv.public.json
 ```
 
 The downloadable PDF is stored at
-[`public/cv/Pablo_Naval_Baudin_CV_English_July_2026.pdf`](public/cv/Pablo_Naval_Baudin_CV_English_July_2026.pdf).
+[`public/cv/Pablo_Naval_Baudin_CV_English_November_2026.pdf`](public/cv/Pablo_Naval_Baudin_CV_English_November_2026.pdf).
 
 ## Supporting material
 
