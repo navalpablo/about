@@ -162,10 +162,16 @@ export default function Home() {
           PNB
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#work">Experience &amp; leadership</a>
+          <a href="#work">Experience</a>
+          <a href="#leadership">Leadership</a>
           <a href="#research">Projects</a>
           <a href="#background">Training</a>
           <a href="#publications">Publications</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#talks">Talks</a>
+          <a href="#courses">Courses</a>
+          <a href="#recognition">Awards</a>
+          <a href="#media">Media</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -445,7 +451,7 @@ export default function Home() {
           </div>
 
           <div className="profile-grid">
-            <div>
+            <div id="teaching">
               <div className="subsection-heading">
                 <p className="aside-label">Teaching and speaking</p>
                 <p>Mentoring, courses and invited lectures</p>
@@ -505,7 +511,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div>
+            <div id="recognition">
               <div className="subsection-heading">
                 <p className="aside-label">Recognition</p>
                 <p>Selected recent awards and distinctions</p>

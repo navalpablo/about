@@ -363,7 +363,14 @@
       "location": "Barcelona, Spain",
       "date": "2026-10-30",
       "notes": "Delivered at Casa de Convalescència, Hospital de la Santa Creu i Sant Pau.",
-      "url": "https://2026.iabiomed.org/"
+      "url": "https://2026.iabiomed.org/",
+      "evidence": [
+        {
+          "label": "Speaker certificate (PDF)",
+          "url": "/evidence/talk-iabiomed-2026.pdf",
+          "kind": "certificate"
+        }
+      ]
     },
     {
       "id": "talk_senr_ai_tips_tricks_2026",

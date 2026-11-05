@@ -50,6 +50,7 @@ summary:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   min-height: 72px;
   padding-inline: max(24px, calc((100vw - 1180px) / 2));
   border-bottom: 1px solid rgba(216, 221, 218, 0.82);
@@ -59,6 +60,7 @@ summary:focus-visible {
 
 .wordmark {
   display: grid;
+  flex-shrink: 0;
   width: 38px;
   height: 38px;
   place-items: center;
@@ -70,7 +72,9 @@ summary:focus-visible {
 
 .site-header nav {
   display: flex;
-  gap: clamp(18px, 3vw, 40px);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px clamp(12px, 1.6vw, 24px);
   color: var(--muted);
   font-size: 0.88rem;
   white-space: nowrap;
@@ -909,7 +913,9 @@ a.publication-citation:hover {
 }
 
 /* Career evidence stays visible; longer academic lists expand on demand. */
-#leadership { scroll-margin-top: 100px; }
+:is(#leadership, #teaching, #talks, #courses, #recognition, #contact) {
+  scroll-margin-top: 100px;
+}
 .leadership-grid, .appointments-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
