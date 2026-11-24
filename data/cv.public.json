@@ -2,7 +2,7 @@
   "metadata": {
     "schema_name": "pablo_naval_baudin_public_cv",
     "schema_version": "1.0.4",
-    "last_updated": "2026-11-05",
+    "last_updated": "2026-11-24",
     "generated_from": "pablo_naval_baudin_cv_master"
   },
   "person": {
@@ -794,12 +794,53 @@
   ],
   "publications": [
     {
+      "id": "pub_2027_t1_dark_rim_spms",
+      "year": 2027,
+      "citation": "Naval-Baudin P, Arroyo-Pereiro P, Martínez-Zalacaín I, et al. T1 dark-rim lesion count and disease duration in subsequent secondary progressive multiple sclerosis: an exploratory matched case-control study. Mult Scler Relat Disord. 2027;117:108087.",
+      "selected": true,
+      "doi": "10.1016/j.msard.2026.108087",
+      "url": "https://doi.org/10.1016/j.msard.2026.108087"
+    },
+    {
+      "id": "pub_2024_t1_dark_rim",
+      "year": 2024,
+      "citation": "Naval-Baudin P, Pons-Escoda A, Castillo-Pinar A, et al. The T1-dark-rim: A novel imaging sign for detecting smoldering inflammation in multiple sclerosis. Eur J Radiol. 2024;173:111358.",
+      "selected": true,
+      "doi": "10.1016/j.ejrad.2024.111358",
+      "url": "https://doi.org/10.1016/j.ejrad.2024.111358"
+    },
+    {
+      "id": "pub_2024_deep_t1_prl",
+      "year": 2024,
+      "citation": "Naval-Baudin P, Pons-Escoda A, Camins À, et al. Deeply 3D-T1-TFE hypointense voxels are characteristic of phase-rim lesions in multiple sclerosis. Eur Radiol. 2024;34:1337–1345.",
+      "selected": true,
+      "doi": "10.1007/s00330-023-09784-w",
+      "url": "https://doi.org/10.1007/s00330-023-09784-w"
+    },
+    {
+      "id": "pub_2025_3d_t1_tse_ms",
+      "year": 2025,
+      "citation": "Naval-Baudin P, Bermúdez Bravo WF, Pineda-Borja VI, et al. 3D T1 Turbo Spin Echo Improves Detection of Gadolinium-Enhancing Multiple-Sclerosis Lesions. Insights Imaging. 2025;16:212.",
+      "selected": true,
+      "doi": "10.1186/s13244-025-02093-4",
+      "url": "https://doi.org/10.1186/s13244-025-02093-4"
+    },
+    {
+      "id": "pub_2026_mcdonald_radiologia_english",
+      "year": 2026,
+      "citation": "Naval-Baudin P, Rovira À. Radiological implications of the 2024 McDonald criteria revision for multiple sclerosis. Radiología (English Edition). 2026;501811.",
+      "selected": true,
+      "doi": "10.1016/j.rxeng.2026.501811",
+      "url": "https://doi.org/10.1016/j.rxeng.2026.501811"
+    },
+    {
       "id": "pub_2026_dsc_pwi_brain_tumours",
       "year": 2026,
       "citation": "García-Hidalgo C, Naval-Baudin P, García-García JI, et al. Dynamic susceptibility contrast perfusion-weighted imaging (DSC-PWI) vascular and metabolic biomarkers for presurgical diagnosis of adult brain tumors across different acquisition parameters. Eur J Radiol. 2026;205:113218.",
       "selected": true,
       "doi": "10.1016/j.ejrad.2026.113218",
-      "url": "https://doi.org/10.1016/j.ejrad.2026.113218"
+      "url": "https://doi.org/10.1016/j.ejrad.2026.113218",
+      "author_note": "Second author"
     },
     {
       "id": "pub_2026_mcdonald_radiologia",
@@ -816,14 +857,6 @@
       "selected": false,
       "doi": "10.1007/s00330-026-12446-2",
       "url": "https://doi.org/10.1007/s00330-026-12446-2"
-    },
-    {
-      "id": "pub_2025_3d_t1_tse_ms",
-      "year": 2025,
-      "citation": "Naval-Baudin P, Bermúdez Bravo WF, Pineda-Borja VI, et al. 3D T1 Turbo Spin Echo Improves Detection of Gadolinium-Enhancing Multiple-Sclerosis Lesions. Insights Imaging. 2025;16:212.",
-      "selected": true,
-      "doi": "10.1186/s13244-025-02093-4",
-      "url": "https://doi.org/10.1186/s13244-025-02093-4"
     },
     {
       "id": "pub_2025_postcontrast_swi_ms",
@@ -856,22 +889,6 @@
       "selected": false,
       "doi": "10.1007/s00330-025-11504-5",
       "url": "https://doi.org/10.1007/s00330-025-11504-5"
-    },
-    {
-      "id": "pub_2024_deep_t1_prl",
-      "year": 2024,
-      "citation": "Naval-Baudin P, Pons-Escoda A, Camins À, et al. Deeply 3D-T1-TFE hypointense voxels are characteristic of phase-rim lesions in multiple sclerosis. Eur Radiol. 2024;34:1337–1345.",
-      "selected": true,
-      "doi": "10.1007/s00330-023-09784-w",
-      "url": "https://doi.org/10.1007/s00330-023-09784-w"
-    },
-    {
-      "id": "pub_2024_t1_dark_rim",
-      "year": 2024,
-      "citation": "Naval-Baudin P, Pons-Escoda A, Castillo-Pinar A, et al. The T1-dark-rim: A novel imaging sign for detecting smoldering inflammation in multiple sclerosis. Eur J Radiol. 2024;173:111358.",
-      "selected": true,
-      "doi": "10.1016/j.ejrad.2024.111358",
-      "url": "https://doi.org/10.1016/j.ejrad.2024.111358"
     },
     {
       "id": "pub_2024_ms_biomarkers_need",

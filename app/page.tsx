@@ -121,6 +121,8 @@ export default function Home() {
   const projectOrder = ["project_imaginem", "project_ia_ictus", "project_mspredict", "project_brain_tumor_perfunomics", "project_amn_dimethyl_fumarate"];
   const highlightedProjects: Project[] = [...cv.projects].sort((a, b) => projectOrder.indexOf(a.id) - projectOrder.indexOf(b.id));
   const selectedPublications = cv.publications.filter((item) => item.selected);
+  const featuredPublications = selectedPublications.slice(0, 6);
+  const morePublications = selectedPublications.slice(featuredPublications.length);
   const selectedTalks = cv.talks;
   const recentAwards = cv.awards.slice(0, 6);
   const featuredMedia = cv.media;
@@ -412,15 +414,19 @@ export default function Home() {
             Google Scholar h-index <strong>{cv.scientific_profile.h_index.google_scholar}</strong>
           </p>
           <div className="publication-list">
-            {selectedPublications.slice(0, 4).map(renderPublication)}
+            {featuredPublications.map(renderPublication)}
           </div>
 
-          <details className="more-records">
-            <summary>More selected publications ({selectedPublications.length - 4})</summary>
-            <div className="publication-list">
-              {selectedPublications.slice(4).map((publication, index) => renderPublication(publication, index + 4))}
-            </div>
-          </details>
+          {morePublications.length > 0 ? (
+            <details className="more-records">
+              <summary>More selected publications ({morePublications.length})</summary>
+              <div className="publication-list">
+                {morePublications.map((publication, index) =>
+                  renderPublication(publication, index + featuredPublications.length),
+                )}
+              </div>
+            </details>
+          ) : null}
 
           <div className="section-actions">
             <a
