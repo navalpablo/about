@@ -600,8 +600,7 @@ export default function Home() {
       <footer className="footer" id="contact">
         <div className="shell footer-grid">
           <div>
-            <p className="eyebrow">Contact</p>
-            <h2>Let&apos;s connect clinical questions with useful technology.</h2>
+            <h2>Contact</h2>
           </div>
           <div className="footer-links">
             <a href={pdfUrl} {...externalLink}>Download CV (PDF) <span aria-hidden="true">↓</span></a>
