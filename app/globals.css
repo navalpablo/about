@@ -2,7 +2,7 @@
   --paper: #f7f7f3;
   --surface: #ffffff;
   --ink: #15232b;
-  --muted: #617078;
+  --muted: #52616a;
   --line: #d8ddda;
   --accent: #155c72;
   --accent-dark: #0c4354;
@@ -441,7 +441,7 @@ summary:focus-visible {
 
 .publication-number {
   margin: 0;
-  color: #a1aaae;
+  color: #606f76;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.55rem;
   line-height: 1;
@@ -539,7 +539,7 @@ a.publication-citation:hover {
 .compact-list article .compact-detail,
 .education-list article .compact-detail {
   margin-top: 9px;
-  color: #7d898f;
+  color: var(--muted);
   font-size: 0.77rem;
 }
 
@@ -559,16 +559,6 @@ a.publication-citation:hover {
   margin-bottom: 40px;
 }
 
-.media-details summary {
-  width: fit-content;
-  cursor: pointer;
-  color: var(--accent);
-  font-size: 0.92rem;
-}
-
-.media-details[open] summary {
-  margin-bottom: 26px;
-}
 
 .media-grid {
   display: grid;
@@ -928,9 +918,6 @@ a.publication-citation:hover {
 .leadership-entry .text-link { display: inline-block; margin-top: 14px; }
 .career-heading { margin: 38px 0 18px; }
 .appointments-grid .work-item { grid-template-columns: 92px minmax(0, 1fr); gap: 18px; }
-.more-records { margin-top: 24px; }
-.more-records summary { cursor: pointer; color: var(--accent); font-size: 0.9rem; width: fit-content; }
-.more-records[open] summary { margin-bottom: 20px; }
 
 .evidence-links {
   display: flex;
@@ -962,4 +949,75 @@ a.publication-citation:hover {
 @media (max-width: 620px) {
   .leadership-grid { padding-inline: 20px; }
   .appointments-grid .work-item { grid-template-columns: 1fr; }
+}
+
+/* Section navigation and the recurring CV archive interaction. */
+.outbound-mark { width: .82em; height: .82em; vertical-align: .03em; flex-shrink: 0; }
+.skip-link {
+  position: fixed; top: 8px; left: 12px; z-index: 30; padding: 10px 16px;
+  background: var(--ink); color: white; transform: translateY(-150%);
+}
+.skip-link:focus { transform: none; }
+main:focus { outline: none; }
+.compact-index-link, .section-index { display: none; }
+.site-header nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.hero { min-height: min(78vh, 800px); }
+.hero-actions .text-link { min-height: 44px; display: inline-flex; align-items: center; gap: 0.4em; }
+.record-group + .record-group { margin-top: clamp(40px, 6vw, 72px); }
+.record-heading { margin: 0 0 18px; font: 400 clamp(1.5rem, 2.6vw, 2.2rem)/1.2 Georgia, serif; letter-spacing: -.025em; }
+.record-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); column-gap: 28px; border-top: 1px solid var(--ink); }
+.record-grid.pair { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.record-card { min-width: 0; padding-block: 21px 24px; border-bottom: 1px solid var(--line); overflow-wrap: break-word; }
+.record-card :is(h3,h4) { margin: 8px 0; font-size: 1rem; font-weight: 650; line-height: 1.45; }
+.record-card p:not(.item-meta) { margin: 5px 0 0; font-size: .9rem; line-height: 1.55; color: var(--muted); }
+.record-card a:not(.evidence-links a):hover, .media-card:hover h3 { color: var(--accent-dark); text-decoration: underline; }
+.record-archive { margin: 16px 0 0; }
+.record-archive > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  min-height: 50px; width: 100%; padding: 11px 16px; list-style: none; cursor: pointer;
+  border: 1px solid #54818a; border-radius: 5px; background: #e7eff0; color: #164b5a;
+  font-size: .94rem; font-weight: 650; line-height: 1.4;
+}
+.record-archive > summary::-webkit-details-marker { display: none; }
+.record-archive > summary:hover { background: #d9e8ea; border-color: var(--accent-dark); }
+.record-archive[open] > summary { margin-bottom: 16px; }
+.record-archive .when-open, .record-archive[open] .when-closed { display: none; }
+.record-archive[open] .when-open { display: inline; }
+.disclosure-icon { display: grid; place-items: center; width: 24px; height: 24px; flex: 0 0 24px; }
+.disclosure-icon::before, .disclosure-icon::after { content: ""; grid-area: 1/1; width: 13px; height: 2px; background: currentColor; }
+.disclosure-icon::after { transform: rotate(90deg); }
+.record-archive[open] > summary .disclosure-icon::after { display: none; }
+.evidence-links a { min-height: 36px; color: var(--accent-dark); border-color: #9baeb1; }
+.media-card { min-height: 210px; }
+.media-card h3 { margin-block: 19px; }
+.footer a:focus-visible { outline-color: #a6dfec; }
+.footer-note { color: rgba(255,255,255,.7); }
+
+@media (max-width: 1000px) {
+  .site-header .desktop-index { display: none; }
+  .site-header { min-height: 58px; padding-block: 6px; flex-wrap: nowrap; }
+  .compact-index-link { display: inline-flex; min-height: 44px; gap: 10px; align-items: center; font-size: .95rem; font-weight: 650; color: var(--accent-dark); }
+  .section-index { display: block; padding: 22px 0 30px; scroll-margin-top: 72px; border-top: 1px solid var(--ink); }
+  .section-index h2 { font: 400 1.65rem/1.25 Georgia, serif; margin: 0 0 12px; }
+  .section-index > div { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); column-gap: 15px; }
+  .section-index a { display: flex; min-height: 44px; align-items: center; color: var(--accent-dark); border-bottom: 1px solid var(--line); font-size: .9rem; }
+  .hero { min-height: auto; padding-block: 52px; gap: 36px; }
+}
+@media (min-width: 621px) and (max-width: 900px) {
+  .record-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 620px) {
+  .hero { padding-block: 40px; gap: 28px; }
+  .hero-actions { gap: 10px 18px; margin-top: 24px; }
+  .section, .secondary-section { padding-block: 48px; }
+  .section-heading, .secondary-section .section-heading { margin-bottom: 26px; }
+  .publication-metrics { margin: 0 0 20px; }
+  .record-grid, .record-grid.pair { grid-template-columns: 1fr; }
+  .record-card { padding-block: 16px; }
+  .media-card { min-height: auto; padding: 18px 20px; }
+  .media-card h3 { margin-block: 12px; }
+  .evidence-links a { min-height: 44px; }
+}
+@media (max-width: 350px) {
+  .section-index > div { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import cv from "../data/cv.public.json";
 
 const siteBasePath = process.env.GITHUB_PAGES === "true" ? "/about" : "";
@@ -67,6 +68,12 @@ type SupportingMaterial = {
   kind: string;
 };
 
+function OutboundMark() {
+  return <svg className="outbound-mark" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+    <path d="M4 12 12 4m-7 0h7v7" fill="none" stroke="currentColor" strokeWidth="1.6" />
+  </svg>;
+}
+
 function SupportingEvidence({
   items,
   activity,
@@ -85,12 +92,116 @@ function SupportingEvidence({
           aria-label={`${item.label}: ${activity}`}
           {...externalLink}
         >
-          {item.label} <span aria-hidden="true">↗</span>
+          {item.label} <OutboundMark />
         </a>
       ))}
     </div>
   );
 }
+
+const sections = [
+  ["work", "Experience"], ["leadership", "Leadership"], ["research", "Projects"],
+  ["background", "Training"], ["publications", "Publications"], ["teaching", "Teaching"],
+  ["talks", "Talks"], ["courses", "Courses"], ["recognition", "Awards"],
+  ["media", "Media"], ["contact", "Contact"],
+];
+
+const pdfUrl = `${siteBasePath}/cv/Pablo_Naval_Baudin_CV_English_November_2026.pdf`;
+
+function SectionLinks() {
+  return sections.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>);
+}
+
+function Archive({ count, label, children }: { count: number; label: string; children: ReactNode }) {
+  if (!count) return null;
+  return (
+    <details className="record-archive">
+      <summary>
+        <span className="when-closed">Show {count} more {label}</span>
+        <span className="when-open">Hide additional {label}</span>
+        <span className="disclosure-icon" aria-hidden="true" />
+      </summary>
+      {children}
+    </details>
+  );
+}
+
+const renderTalk = (talk: (typeof cv.talks)[number]) => (
+  <article className="record-card" key={talk.id}>
+    <p className="item-meta">
+      {formatDate(talk.date ?? talk.date_start)}
+      {"status" in talk && talk.status === "upcoming" ? " · Upcoming" : null}
+    </p>
+    <div>
+      {talk.url ? (
+        <h4>
+          <a href={talk.url} {...externalLink}>
+            {talk.title} <OutboundMark />
+          </a>
+        </h4>
+      ) : (
+        <h4>{talk.title}</h4>
+      )}
+      <p>
+        {talk.role} · {talk.event}
+      </p>
+      <p className="compact-detail">{talk.organization} · {talk.location}</p>
+      <SupportingEvidence items={talk.evidence} activity={talk.title} />
+    </div>
+  </article>
+);
+
+const renderCourse = (course: (typeof cv.courses)[number]) => (
+  <article className="record-card" key={course.id}>
+    <p className="item-meta">{formatDate(course.date)}</p>
+    <div>
+      <h4>{course.title}</h4>
+      <p>{course.organization}</p>
+      <p className="compact-detail">{course.location}</p>
+      {course.notes ? <p className="compact-detail">{course.notes}</p> : null}
+      <SupportingEvidence items={course.evidence} activity={course.title} />
+    </div>
+  </article>
+);
+
+const renderAward = (award: (typeof cv.awards)[number]) => (
+  <article className="record-card" key={award.id}>
+    <p className="item-meta">{award.year}</p>
+    <div>
+      {award.url ? (
+        <h3>
+          <a href={award.url} {...externalLink}>
+            {award.award} <OutboundMark />
+          </a>
+        </h3>
+      ) : (
+        <h3>{award.award}</h3>
+      )}
+      <p>{award.organization}</p>
+      {award.awarded_work ? (
+        <p className="compact-detail">{award.awarded_work}</p>
+      ) : null}
+    </div>
+  </article>
+);
+
+const renderMedia = (item: (typeof cv.media)[number]) => (
+  <a
+    className="media-card"
+    href={item.url}
+    key={item.id}
+    {...externalLink}
+  >
+    <div>
+      <p className="item-meta">{formatDate(item.date)}</p>
+      <p className="media-outlet">{item.outlet}</p>
+    </div>
+    <h3>{item.title}</h3>
+    <p className="media-type">
+      {item.type} <OutboundMark />
+    </p>
+  </a>
+);
 
 export default function Home() {
   const appointmentOrder = ["appt_idi_bellvitge_consultant", "appt_bellvitge_radiomics_lead"];
@@ -118,14 +229,17 @@ export default function Home() {
         item.current || item.id === "role_seram_2026_congress_leadership",
     )
     .sort((a, b) => Number(a.id === "role_senr_young_committee") - Number(b.id === "role_senr_young_committee"));
-  const projectOrder = ["project_imaginem", "project_ia_ictus", "project_mspredict", "project_brain_tumor_perfunomics", "project_amn_dimethyl_fumarate"];
-  const highlightedProjects: Project[] = [...cv.projects].sort((a, b) => projectOrder.indexOf(a.id) - projectOrder.indexOf(b.id));
+  const projectOrder = ["project_imaginem", "project_ia_ictus", "project_rimlong", "project_mspredict", "project_brain_tumor_perfunomics", "project_amn_dimethyl_fumarate"];
+  const projectRanks = new Map(projectOrder.map((id, i) => [id, i]));
+  const highlightedProjects: Project[] = [...cv.projects].sort((a, b) =>
+    (projectRanks.get(a.id) ?? Infinity) - (projectRanks.get(b.id) ?? Infinity)
+  );
   const selectedPublications = cv.publications.filter((item) => item.selected);
   const featuredPublications = selectedPublications.slice(0, 6);
   const morePublications = selectedPublications.slice(featuredPublications.length);
   const selectedTalks = cv.talks;
   const recentAwards = cv.awards.slice(0, 6);
-  const featuredMedia = cv.media;
+  const media = [...cv.media].sort((a, b) => b.date.localeCompare(a.date));
   const selectedEducation = cv.education;
 
   const renderPublication = (publication: (typeof cv.publications)[number], index: number) => (
@@ -141,7 +255,7 @@ export default function Home() {
                       href={publication.url}
                       {...externalLink}
                     >
-                      {publication.citation} <span aria-hidden="true">↗</span>
+                      {publication.citation} <OutboundMark />
                     </a>
                   ) : (
                     <p className="publication-citation">
@@ -159,26 +273,17 @@ export default function Home() {
 
   return (
     <>
+      <a className="skip-link" href="#main-content">Skip to CV</a>
+      <div id="top" />
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Pablo Naval Baudín, home">
+        <a className="wordmark" href="#top" aria-label="PNB — Pablo Naval Baudín, home">
           PNB
         </a>
-        <nav aria-label="Primary navigation">
-          <a href="#work">Experience</a>
-          <a href="#leadership">Leadership</a>
-          <a href="#research">Projects</a>
-          <a href="#background">Training</a>
-          <a href="#publications">Publications</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#talks">Talks</a>
-          <a href="#courses">Courses</a>
-          <a href="#recognition">Awards</a>
-          <a href="#media">Media</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        <nav aria-label="CV sections" className="desktop-index"><SectionLinks /></nav>
+        <a className="compact-index-link" href="#section-index">CV sections <span aria-hidden="true">↓</span></a>
       </header>
 
-      <main id="top" data-cv-build={process.env.GITHUB_SHA ?? "local"}>
+      <main id="main-content" tabIndex={-1} data-cv-build={process.env.GITHUB_SHA ?? "local"}>
         <section className="hero shell" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">Neuroradiology · Barcelona</p>
@@ -188,22 +293,18 @@ export default function Home() {
             <p className="hero-headline">{cv.profile.headline}</p>
             <p className="hero-summary">{cv.profile.summary}</p>
             <div className="hero-actions">
-              <a className="primary-link" href={`mailto:${cv.contacts.email}`}>
-                Get in touch <span aria-hidden="true">↗</span>
+              <a className="primary-link" href={pdfUrl} {...externalLink}>
+                Download CV (PDF) <span aria-hidden="true">↓</span>
               </a>
-              <a
-                className="text-link"
-                href={`${siteBasePath}/cv/Pablo_Naval_Baudin_CV_English_November_2026.pdf`}
-                {...externalLink}
-              >
-                Download CV <span aria-hidden="true">↓</span>
+              <a className="text-link" href={`mailto:${cv.contacts.email}`}>
+                Get in touch <OutboundMark />
               </a>
               <a
                 className="text-link"
                 href={cv.contacts.google_scholar}
                 {...externalLink}
               >
-                Google Scholar <span aria-hidden="true">↗</span>
+                Google Scholar <OutboundMark />
               </a>
             </div>
           </div>
@@ -219,7 +320,7 @@ export default function Home() {
               ) : null}
               {seramRole ? (
                 <li>
-                  <a href="#work"><strong>{seramRole.title}</strong></a>
+                  <a href="#leadership"><strong>{seramRole.title}</strong></a>
                   <span>SERAM · Spanish Society of Medical Radiology</span>
                 </li>
               ) : null}
@@ -233,6 +334,11 @@ export default function Home() {
           </aside>
         </section>
 
+        <nav className="section-index shell" id="section-index" aria-labelledby="index-title">
+          <h2 id="index-title">CV sections</h2>
+          <div><SectionLinks /></div>
+        </nav>
+
         <section className="section shell" id="work" aria-labelledby="work-title">
           <div className="section-heading">
             <p className="section-number">01</p>
@@ -240,19 +346,6 @@ export default function Home() {
               <p className="eyebrow">Experience &amp; leadership</p>
               <h2 id="work-title">Clinical practice and coordinating roles</h2>
             </div>
-          </div>
-
-          <div className="leadership-grid" id="leadership" aria-label="Professional leadership and mentoring">
-            {highlightedLeadership.map((role) => (
-              <article className="leadership-entry" key={role.id}>
-                <p className="item-meta">{formatRange(role.start_date, role.current ? null : role.end_date)}</p>
-                <h3>{role.title}</h3>
-                <p className="organization">{role.organization}</p>
-                {role.description ? <p className="item-detail">{role.description}</p> : null}
-                {role.subroles ? <p className="item-detail">{role.subroles.join(" · ")}</p> : null}
-                {role.evidence_url ? <a className="text-link" href={role.evidence_url} {...externalLink}>Programme and team delivery ↗</a> : null}
-              </article>
-            ))}
           </div>
 
           <h3 className="aside-label career-heading">Current clinical and research appointments</h3>
@@ -281,6 +374,20 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <h3 id="leadership" className="aside-label career-heading">Professional leadership</h3>
+          <div className="leadership-grid" aria-label="Professional leadership and mentoring">
+            {highlightedLeadership.map((role) => (
+              <article className="leadership-entry" key={role.id}>
+                <p className="item-meta">{formatRange(role.start_date, role.current ? null : role.end_date)}</p>
+                <h3>{role.title}</h3>
+                <p className="organization">{role.organization}</p>
+                {role.description ? <p className="item-detail">{role.description}</p> : null}
+                {role.subroles ? <p className="item-detail">{role.subroles.join(" · ")}</p> : null}
+                {role.evidence_url ? <a className="text-link" href={role.evidence_url} {...externalLink}>Programme and team delivery <OutboundMark /></a> : null}
+              </article>
+            ))}
+          </div>
+
         </section>
 
         <section
@@ -304,7 +411,7 @@ export default function Home() {
                   <h3>
                     {project.url ? (
                       <a href={project.url} {...externalLink}>
-                        {project.title} <span aria-hidden="true">↗</span>
+                        {project.title} <OutboundMark />
                       </a>
                     ) : (
                       project.title
@@ -382,13 +489,13 @@ export default function Home() {
               <div className="identifier-list">
                 <p className="aside-label">Research profiles</p>
                 <a href={cv.contacts.orcid_url} {...externalLink}>
-                  ORCID {cv.contacts.orcid} <span aria-hidden="true">↗</span>
+                  ORCID {cv.contacts.orcid} <OutboundMark />
                 </a>
                 <a href={cv.contacts.google_scholar} {...externalLink}>
-                  Google Scholar <span aria-hidden="true">↗</span>
+                  Google Scholar <OutboundMark />
                 </a>
                 <a href={cv.contacts.researchgate} {...externalLink}>
-                  ResearchGate <span aria-hidden="true">↗</span>
+                  ResearchGate <OutboundMark />
                 </a>
               </div>
             </aside>
@@ -409,24 +516,19 @@ export default function Home() {
           </div>
 
           <p className="publication-metrics">
-            <strong>{cv.scientific_profile.medline_indexed_publications}</strong> peer-reviewed publications
+            <strong>{cv.scientific_profile.medline_indexed_publications}</strong> MEDLINE-indexed publications ({formatDate(cv.scientific_profile.publications_as_of)})
             <span aria-hidden="true"> · </span>
-            Google Scholar h-index <strong>{cv.scientific_profile.h_index.google_scholar}</strong>
+            Google Scholar h-index <strong>{cv.scientific_profile.h_index.google_scholar}</strong> ({formatDate(cv.scientific_profile.google_scholar_as_of)})
           </p>
           <div className="publication-list">
             {featuredPublications.map(renderPublication)}
           </div>
 
-          {morePublications.length > 0 ? (
-            <details className="more-records">
-              <summary>More selected publications ({morePublications.length})</summary>
-              <div className="publication-list">
-                {morePublications.map((publication, index) =>
-                  renderPublication(publication, index + featuredPublications.length),
-                )}
-              </div>
-            </details>
-          ) : null}
+          <Archive label="selected publications" count={morePublications.length}>
+            <div className="publication-list">
+              {morePublications.map((p, i) => renderPublication(p, i + featuredPublications.length))}
+            </div>
+          </Archive>
 
           <div className="section-actions">
             <a
@@ -434,158 +536,65 @@ export default function Home() {
               href={cv.contacts.google_scholar}
               {...externalLink}
             >
-              Full publication record <span aria-hidden="true">↗</span>
+              Full publication record <OutboundMark />
             </a>
-            <span>
-              {cv.scientific_profile.medline_indexed_publications} peer-reviewed
-              publications ({cv.scientific_profile.publications_as_of ?? cv.scientific_profile.metrics_as_of}) · Google Scholar h-index {cv.scientific_profile.h_index.google_scholar} ({cv.scientific_profile.google_scholar_as_of ?? cv.scientific_profile.metrics_as_of})
-            </span>
+
           </div>
         </section>
 
-        <section
-          className="section shell secondary-section"
-          id="profile"
-          aria-labelledby="profile-title"
-        >
-          <div className="section-heading">
+        <section id="profile" className="section shell secondary-section" aria-labelledby="profile-title">
+          <div className="section-heading" id="teaching">
             <p className="section-number">05</p>
-            <div>
-              <p className="eyebrow">Teaching &amp; recognition</p>
-              <h2 id="profile-title">Speaking, teaching and recognition</h2>
+            <div><p className="eyebrow">Education &amp; outreach</p><h2 id="profile-title">Teaching and invited talks</h2></div>
+          </div>
+          <div className="record-group">
+            <h3 className="record-heading">Teaching appointments</h3>
+            <div className="record-grid pair">
+              {teachingRoles.map((role) => (
+                <article className="record-card" key={role.id}>
+                  <p className="item-meta">{role.years?.join(", ")}</p>
+                  <h4>{role.title}</h4><p>{role.organization}</p>
+                </article>
+              ))}
             </div>
           </div>
-
-          <div className="profile-grid">
-            <div id="teaching">
-              <div className="subsection-heading">
-                <p className="aside-label">Teaching and speaking</p>
-                <p>Mentoring, courses and invited lectures</p>
-              </div>
-              <div className="compact-list">
-                {teachingRoles.map((role) => (
-                  <article key={role.id}>
-                    <p className="item-meta">{role.years?.join(", ")}</p>
-                    <div>
-                      <h3>{role.title}</h3>
-                      <p>{role.organization}</p>
-                    </div>
-                  </article>
-                ))}
-                <details className="more-records" id="talks">
-                  <summary>Talks and workshops ({selectedTalks.length})</summary>
-                {selectedTalks.map((talk) => (
-                  <article key={talk.id}>
-                    <p className="item-meta">
-                      {formatDate(talk.date ?? talk.date_start)}
-                      {"status" in talk && talk.status === "upcoming" ? " · Upcoming" : null}
-                    </p>
-                    <div>
-                      {talk.url ? (
-                        <h3>
-                          <a href={talk.url} {...externalLink}>
-                            {talk.title} <span aria-hidden="true">↗</span>
-                          </a>
-                        </h3>
-                      ) : (
-                        <h3>{talk.title}</h3>
-                      )}
-                      <p>
-                        {talk.role} · {talk.event}
-                      </p>
-                      <p className="compact-detail">{talk.organization} · {talk.location}</p>
-                      <SupportingEvidence items={talk.evidence} activity={talk.title} />
-                    </div>
-                  </article>
-                ))}
-                </details>
-                <details className="more-records" id="courses">
-                  <summary>Professional courses attended ({cv.courses.length})</summary>
-                  {cv.courses.map((course) => (
-                    <article key={course.id}>
-                      <p className="item-meta">{formatDate(course.date)}</p>
-                      <div>
-                        <h3>{course.title}</h3>
-                        <p>{course.organization}</p>
-                        <p className="compact-detail">{course.location}</p>
-                        {course.notes ? <p className="compact-detail">{course.notes}</p> : null}
-                        <SupportingEvidence items={course.evidence} activity={course.title} />
-                      </div>
-                    </article>
-                  ))}
-                </details>
-              </div>
-            </div>
-
-            <div id="recognition">
-              <div className="subsection-heading">
-                <p className="aside-label">Recognition</p>
-                <p>Selected recent awards and distinctions</p>
-              </div>
-              <div className="compact-list">
-                {recentAwards.map((award) => (
-                  <article key={award.id}>
-                    <p className="item-meta">{award.year}</p>
-                    <div>
-                      {award.url ? (
-                        <h3>
-                          <a href={award.url} {...externalLink}>
-                            {award.award} <span aria-hidden="true">↗</span>
-                          </a>
-                        </h3>
-                      ) : (
-                        <h3>{award.award}</h3>
-                      )}
-                      <p>{award.organization}</p>
-                      {award.awarded_work ? (
-                        <p className="compact-detail">{award.awarded_work}</p>
-                      ) : null}
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
+          <div id="talks" className="record-group">
+            <h3 className="record-heading">Invited talks and workshops</h3>
+            <div className="record-grid">{selectedTalks.slice(0, 3).map(renderTalk)}</div>
+            <Archive count={Math.max(0, selectedTalks.length - 3)} label="talks and workshops">
+              <div className="record-grid">{selectedTalks.slice(3).map(renderTalk)}</div>
+            </Archive>
+          </div>
+          <div id="courses" className="record-group">
+            <h3 className="record-heading">Professional courses attended</h3>
+            <div className="record-grid pair">{cv.courses.slice(0, 2).map(renderCourse)}</div>
+            <Archive count={Math.max(0, cv.courses.length - 2)} label="courses">
+              <div className="record-grid pair">{cv.courses.slice(2).map(renderCourse)}</div>
+            </Archive>
           </div>
         </section>
 
-        <section
-          className="section shell media-section secondary-section"
-          id="media"
-          aria-labelledby="media-title"
-        >
+        <section id="recognition" className="section shell secondary-section" aria-labelledby="awards-title">
           <div className="section-heading">
             <p className="section-number">06</p>
-            <div>
-              <p className="eyebrow">Media</p>
-              <h2 id="media-title">Clinical AI and imaging in the public conversation</h2>
-            </div>
+            <div><p className="eyebrow">Recognition</p><h2 id="awards-title">Awards and distinctions</h2></div>
           </div>
-
-          <details className="media-details">
-            <summary>View {featuredMedia.length} interviews and features</summary>
-            <div className="media-grid">
-            {featuredMedia.map((item) => (
-              <a
-                className="media-card"
-                href={item.url}
-                key={item.id}
-                {...externalLink}
-              >
-                <div>
-                  <p className="item-meta">{formatDate(item.date)}</p>
-                  <p className="media-outlet">{item.outlet}</p>
-                </div>
-                <h3>{item.title}</h3>
-                <p className="media-type">
-                  {item.type} <span aria-hidden="true">↗</span>
-                </p>
-              </a>
-            ))}
-            </div>
-          </details>
+          <div className="record-grid">{recentAwards.map(renderAward)}</div>
+          <Archive count={cv.awards.length - recentAwards.length} label="awards">
+            <div className="record-grid">{cv.awards.slice(recentAwards.length).map(renderAward)}</div>
+          </Archive>
         </section>
 
-
+        <section id="media" className="section shell secondary-section" aria-labelledby="media-title">
+          <div className="section-heading">
+            <p className="section-number">07</p>
+            <div><p className="eyebrow">Media</p><h2 id="media-title">Interviews and press coverage</h2></div>
+          </div>
+          <div className="media-grid">{media.slice(0, 3).map(renderMedia)}</div>
+          <Archive count={Math.max(0, media.length - 3)} label="media appearances">
+            <div className="media-grid">{media.slice(3).map(renderMedia)}</div>
+          </Archive>
+        </section>
       </main>
 
       <footer className="footer" id="contact">
@@ -595,15 +604,16 @@ export default function Home() {
             <h2>Let&apos;s connect clinical questions with useful technology.</h2>
           </div>
           <div className="footer-links">
+            <a href={pdfUrl} {...externalLink}>Download CV (PDF) <span aria-hidden="true">↓</span></a>
             <a href={`mailto:${cv.contacts.email}`}>{cv.contacts.email}</a>
             <a href={cv.contacts.linkedin} {...externalLink}>
-              LinkedIn <span aria-hidden="true">↗</span>
+              LinkedIn <OutboundMark />
             </a>
             <a href={cv.contacts.orcid_url} {...externalLink}>
-              ORCID {cv.contacts.orcid} <span aria-hidden="true">↗</span>
+              ORCID {cv.contacts.orcid} <OutboundMark />
             </a>
             <a href={cv.contacts.google_scholar} {...externalLink}>
-              Google Scholar <span aria-hidden="true">↗</span>
+              Google Scholar <OutboundMark />
             </a>
             <a
               href={`${siteBasePath}/data/cv.public.json`}
