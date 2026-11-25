@@ -214,13 +214,13 @@ export default function Home() {
       };
       return rank(a.id) - rank(b.id);
     });
+  const clinicalRole = currentAppointments.find((item) => item.id === "appt_idi_bellvitge_consultant");
   const bellvitgeLead = currentAppointments.find(
     (item) => item.id === "appt_bellvitge_radiomics_lead",
   );
   const seramRole = cv.leadership.find(
     (item) => item.id === "role_seram_ai_commission_coordinator",
   );
-  const congressRole = cv.leadership.find((item) => item.id === "role_seram_2026_congress_leadership");
   const previousAppointments = cv.appointments.filter((item) => !item.current);
   const teachingRoles = cv.leadership.filter((item) => item.years);
   const highlightedLeadership = cv.leadership
@@ -312,6 +312,12 @@ export default function Home() {
           <aside className="hero-aside" aria-label="Clinical and project roles">
             <p className="aside-label">Clinical work &amp; project leadership</p>
             <ul className="role-highlights">
+              {clinicalRole ? (
+                <li>
+                  <a href="#work"><strong>{clinicalRole.title}</strong></a>
+                  <span>IDI · Hospital Universitari de Bellvitge · Since {formatYear(clinicalRole.start_date)}</span>
+                </li>
+              ) : null}
               {bellvitgeLead ? (
                 <li>
                   <a href="#work"><strong>{bellvitgeLead.title}</strong></a>
@@ -322,12 +328,6 @@ export default function Home() {
                 <li>
                   <a href="#leadership"><strong>{seramRole.title}</strong></a>
                   <span>SERAM · Spanish Society of Medical Radiology</span>
-                </li>
-              ) : null}
-              {congressRole ? (
-                <li>
-                  <a href="#leadership"><strong>{congressRole.title}</strong></a>
-                  <span>SERAM 2026 · 14 thematic blocks, 11 joint sessions</span>
                 </li>
               ) : null}
             </ul>
